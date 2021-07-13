@@ -1,8 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import * as AiIcons from "react-icons/ai";
 
-const SocialMediaList = styled.ul`
+export const LinksList = styled.ul`
   position: absolute;
   left: 50%;
   bottom: 1rem;
@@ -56,27 +54,3 @@ const SocialMediaList = styled.ul`
     }
   }
 `;
-
-function SocialVertical() {
-  return (
-    <SocialMediaList>
-      <li>
-        <a href="#!">
-          <AiIcons.AiFillGithub />
-        </a>
-      </li>
-      <li>
-        <a href="#!">
-          <AiIcons.AiFillFacebook />
-        </a>
-      </li>
-      <li>
-        <a href="#!">
-          <AiIcons.AiFillLinkedin />
-        </a>
-      </li>
-    </SocialMediaList>
-  );
-}
-
-export default SocialVertical;

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import SocialVertical from "./components/SocialVertical";
-import { Section } from "./styled/Section.styled";
+import Hero from "./components/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
+import SocialMediaLinks from "./components/SocialMediaLinks/SocialMediaLinks";
+import { Section } from "./components/Section/Section.styled";
 
 const StyledApp = styled.main`
   position: relative;
@@ -16,7 +16,7 @@ function App() {
       <Navbar />
       <Section centered>
         <Hero />
-        <SocialVertical />
+        <SocialMediaLinks />
       </Section>
     </StyledApp>
   );

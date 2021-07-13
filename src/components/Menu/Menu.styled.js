@@ -1,8 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import SocialVertical from "./SocialVertical";
 
-const StyledMenu = styled.nav`
+export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,28 +48,3 @@ const StyledMenu = styled.nav`
     }
   }
 `;
-
-function Menu({ open }) {
-  return (
-    <StyledMenu open={open}>
-      <a data-link="Home" href="#!">
-        Home
-      </a>
-      <a data-link="About me" href="#!">
-        About me
-      </a>
-      <a data-link="Skills" href="#!">
-        Skills
-      </a>
-      <a data-link="Projects" href="#!">
-        Projects
-      </a>
-      <a data-link="Contact" href="#!">
-        Contact
-      </a>
-      <SocialVertical />
-    </StyledMenu>
-  );
-}
-
-export default Menu;

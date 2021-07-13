@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const StyledBurger = styled.button`
+export const StyledBurger = styled.button`
   margin-left: auto;
   display: flex;
   flex-direction: column;
@@ -41,15 +40,3 @@ const StyledBurger = styled.button`
     }
   }
 `;
-
-function Burger({ open, setOpen }) {
-  return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
-  );
-}
-
-export default Burger;
