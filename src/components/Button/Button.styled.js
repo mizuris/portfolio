@@ -9,6 +9,7 @@ export const Button = styled.button`
   padding: 0.5rem 1rem;
   color: ${({ theme }) => theme.mainDark};
   transition: 800ms all;
+  font-weight: ${({ bold }) => (bold ? "bold" : "regular")};
 
   &:hover {
     background: transparent;
@@ -21,9 +22,9 @@ export const Button = styled.button`
     position: absolute;
     top: 0;
     right: 0;
-    height: 2px;
+    height: 0.1rem;
     width: 0;
-    background: ${({ theme }) => theme.medium};
+    background: ${({ theme }) => theme.light};
     transition: 400ms ease all;
   }
 

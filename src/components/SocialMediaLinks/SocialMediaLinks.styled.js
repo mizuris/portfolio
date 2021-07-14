@@ -2,14 +2,28 @@ import styled from "styled-components";
 
 export const LinksList = styled.ul`
   position: absolute;
-  left: 50%;
-  bottom: 1rem;
-  transform: translateX(-50%);
   list-style: none;
   display: flex;
+  z-index: 8;
+  ${({ aside }) => {
+    if (aside) {
+      return {
+        right: "1rem",
+        top: "50%",
+        flexDirection: "column",
+        transform: "translateY(-50%)",
+      };
+    }
+    return {
+      left: "50%",
+      bottom: "1rem",
+      flexDirection: "row",
+      transform: "translateX(-50%)",
+    };
+  }}
 
   li {
-    margin: 0 1rem;
+    padding: 1rem;
 
     a {
       display: inline-flex;

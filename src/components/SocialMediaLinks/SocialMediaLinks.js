@@ -1,10 +1,9 @@
 import React from "react";
 import * as AiIcons from "react-icons/ai";
-import { LinksList } from "./SocialMediaLinks.styled";
 
 function SocialMediaLinks() {
   return (
-    <LinksList>
+    <>
       <li>
         <a target="_blank" rel="noopener" href="#!">
           <AiIcons.AiFillGithub />
@@ -20,7 +19,7 @@ function SocialMediaLinks() {
           <AiIcons.AiFillLinkedin />
         </a>
       </li>
-    </LinksList>
+    </>
   );
 }
 

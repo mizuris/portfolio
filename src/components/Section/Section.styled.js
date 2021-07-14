@@ -4,12 +4,20 @@ export const Section = styled.section`
   width: 100%;
   min-height: 100vh;
   position: relative;
-  ${({ centered }) => {
-    if (centered) {
+  overflow: hidden;
+  display: ${({ flex }) => (flex ? "flex" : "block")};
+  align-items: ${({ centered }) => (centered ? "center" : "stretch")};
+  ${({ evenly }) => {
+    if (evenly) {
       return {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-evenly",
+      };
+    }
+  }}
+  ${({ between }) => {
+    if (between) {
+      return {
+        justifyContent: "space-between",
       };
     }
   }}

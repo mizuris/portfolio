@@ -1,30 +1,35 @@
 import React from "react";
-import styled from "styled-components";
 import { Button } from "../Button/Button.styled";
-
-const StyledHero = styled.div`
-  color: white;
-  position: relative;
-
-  b {
-    color: ${({ theme }) => theme.special};
-  }
-
-  ${Button} {
-    position: relative;
-  }
-`;
+import {
+  StyledHero,
+  Wrapper,
+  Welcome,
+  Introduction,
+  Portrait,
+} from "./Hero.styled";
+import person from "../../assets/images/person.png";
+import { LinksList } from "../SocialMediaLinks/SocialMediaLinks.styled";
+import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
 
 function Hero() {
   return (
     <StyledHero>
-      <div>
-        <h4>Welcome!</h4>
-        <h1>
-          My name is <b>Peter</b> and i am Junior <b>Frontend</b> Developer
-        </h1>
-      </div>
-      <Button>About me</Button>
+      <Wrapper>
+        <Welcome>Welcome! My name is...</Welcome>
+        <Introduction>
+          <h1>Piotr Bątor</h1>
+          <h2>Junior Frontend Developer</h2>
+        </Introduction>
+        <Button bold>About me</Button>
+        <Button bold>See my work</Button>
+      </Wrapper>
+      <Portrait>
+        <div />
+        <img src={person} alt="person" />
+      </Portrait>{" "}
+      <LinksList aside>
+        <SocialMediaLinks />
+      </LinksList>
     </StyledHero>
   );
 }

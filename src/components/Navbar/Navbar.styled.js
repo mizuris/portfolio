@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledNav = styled.nav`
+export const StyledNav = styled.div`
   z-index: 100;
   position: fixed;
   top: 0;

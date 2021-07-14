@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Hero from "./components/Hero/Hero";
-import Navbar from "./components/Navbar/Navbar";
-import SocialMediaLinks from "./components/SocialMediaLinks/SocialMediaLinks";
 import { Section } from "./components/Section/Section.styled";
+import Navbar from "./components/Navbar/Navbar";
 
 const StyledApp = styled.main`
   position: relative;
@@ -14,9 +13,8 @@ function App() {
   return (
     <StyledApp>
       <Navbar />
-      <Section centered>
+      <Section flex between>
         <Hero />
-        <SocialMediaLinks />
       </Section>
     </StyledApp>
   );

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledLogo = styled.a`
+  z-index: 10;
   width: 100%;
   display: flex;
   align-items: center;

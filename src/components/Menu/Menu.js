@@ -1,10 +1,11 @@
 import React from "react";
 import { StyledMenu } from "./Menu.styled";
-import SocialVertical from "../SocialMediaLinks/SocialMediaLinks";
+import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
+import { LinksList } from "../SocialMediaLinks/SocialMediaLinks.styled";
 
 function Menu({ open }) {
   return (
-    <StyledMenu open={open}>
+    <StyledMenu aria-label="Navigation links" open={open}>
       <a data-link="Home" href="#!">
         Home
       </a>
@@ -20,7 +21,9 @@ function Menu({ open }) {
       <a data-link="Contact" href="#!">
         Contact
       </a>
-      <SocialVertical />
+      <LinksList>
+        <SocialMediaLinks />
+      </LinksList>
     </StyledMenu>
   );
 }

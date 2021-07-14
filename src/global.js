@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
     color: ${({ theme }) => theme.light};
+    outline-color: ${({ theme }) => theme.medium};
     
     &::after, &::before {
         box-sizing: border-box;
