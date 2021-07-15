@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Hero from "./components/Hero/Hero";
-import { Section } from "./components/Section/Section.styled";
+import { Section } from "./components/Styled/styled";
 import Navbar from "./components/Navbar/Navbar";
-import AboutMe from "./components/AboutMe/AboutMe";
+import Header from "./components/Header/Header";
 
 const StyledApp = styled.main`
   position: relative;
@@ -14,10 +13,11 @@ function App() {
   return (
     <StyledApp>
       <Navbar />
-      <Hero />
-      <Section>
-        <AboutMe />
-      </Section>
+      <Header />
+      <Section data-section="About"></Section>
+      <Section data-section="Projects"></Section>
+      <Section data-section="Skills"></Section>
+      <Section data-section="Contact"></Section>
     </StyledApp>
   );
 }

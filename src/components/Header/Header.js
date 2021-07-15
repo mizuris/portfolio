@@ -1,21 +1,21 @@
 import React from "react";
-import { Button } from "../Button/Button.styled";
+import { Button } from "../Styled/styled";
 import {
-  StyledHero,
+  StyledHeader,
   Wrapper,
   Welcome,
   Introduction,
   Portrait,
   ScrollDown,
-} from "./Hero.styled";
-import person from "../../assets/images/person.png";
+} from "./Header.styled";
 import { LinksList } from "../SocialMediaLinks/SocialMediaLinks.styled";
 import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
+import person from "../../assets/images/person.png";
 
-function Hero() {
+function Header() {
   return (
-    <StyledHero>
-      <Wrapper>
+    <StyledHeader>
+      <Wrapper as="header">
         <Welcome>
           <span>Hi!</span> My name is...
         </Welcome>
@@ -29,13 +29,13 @@ function Hero() {
       <Portrait>
         <div />
         <img src={person} alt="person" />
-      </Portrait>{" "}
+      </Portrait>
       <LinksList aside>
         <SocialMediaLinks />
       </LinksList>
       <ScrollDown />
-    </StyledHero>
+    </StyledHeader>
   );
 }
 
-export default Hero;
+export default Header;

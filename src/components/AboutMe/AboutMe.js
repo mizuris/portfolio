@@ -4,7 +4,7 @@ import { StyledAboutMe } from "./AboutMe.styled";
 function AboutMe() {
     return (
         <StyledAboutMe>
-            About me
+            
         </StyledAboutMe>
     )
 }

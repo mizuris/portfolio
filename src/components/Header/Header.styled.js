@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
-import { Button } from "../Button/Button.styled";
+import { Button } from "../Styled/styled";
 import { LinksList } from "../SocialMediaLinks/SocialMediaLinks.styled";
-import { Section } from "../Section/Section.styled";
+import { Section } from "../Styled/styled";
 
 const bounce = keyframes`
   0% {
@@ -15,12 +15,16 @@ const bounce = keyframes`
   }
 `;
 
-export const StyledHero = styled(Section)`
+export const StyledHeader = styled(Section)`
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
+  &::before {
+    display: none;
+  }
 
   ${LinksList} {
     right: "1rem";
@@ -28,7 +32,7 @@ export const StyledHero = styled(Section)`
     flex-direction: "column";
     transform: "translateY(-50%)";
 
-    &::before {
+    &::after {
       content: "";
       position: absolute;
       bottom: -500%;
