@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Hero from "./components/Hero/Hero";
 import { Section } from "./components/Section/Section.styled";
 import Navbar from "./components/Navbar/Navbar";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 const StyledApp = styled.main`
   position: relative;
@@ -13,8 +14,9 @@ function App() {
   return (
     <StyledApp>
       <Navbar />
-      <Section flex between>
-        <Hero />
+      <Hero />
+      <Section>
+        <AboutMe />
       </Section>
     </StyledApp>
   );

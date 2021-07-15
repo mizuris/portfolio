@@ -22,9 +22,4 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-p {
-    margin-bottom: 1rem;
-}
-
 `;

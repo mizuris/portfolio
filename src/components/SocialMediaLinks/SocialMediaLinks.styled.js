@@ -4,6 +4,7 @@ export const LinksList = styled.ul`
   position: absolute;
   list-style: none;
   display: flex;
+  align-items: center;
   z-index: 8;
   ${({ aside }) => {
     if (aside) {
@@ -27,6 +28,7 @@ export const LinksList = styled.ul`
 
     a {
       display: inline-flex;
+      align-items: center;
       font-size: 1.5rem;
       width: 3rem;
       height: 3rem;
@@ -35,6 +37,7 @@ export const LinksList = styled.ul`
       position: relative;
       z-index: 1;
       margin: auto;
+      padding: 0;
 
       svg {
         fill: ${({ theme }) => theme.medium};

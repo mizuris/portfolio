@@ -22,10 +22,6 @@ export const Section = styled.section`
     }
   }}
 
-  p {
-    font-size: 0.9rem;
-  }
-
   &:nth-of-type(odd) {
     background: ${({ theme }) => theme.mainDark};
   }

@@ -1,15 +1,26 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Button } from "../Button/Button.styled";
 import { LinksList } from "../SocialMediaLinks/SocialMediaLinks.styled";
+import { Section } from "../Section/Section.styled";
 
-export const StyledHero = styled.div`
-  color: white;
+const bounce = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-40%);
+  }
+  30%, 100% {
+    transform: translateY(0);
+  }
+`;
+
+export const StyledHero = styled(Section)`
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: 0 auto;
 
   ${LinksList} {
     right: "1rem";
@@ -29,7 +40,9 @@ export const StyledHero = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 576px) {
+    justify-content: space-between;
+
     ${LinksList} {
       display: none;
     }
@@ -37,30 +50,50 @@ export const StyledHero = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  width: 80%;
-  margin-left: 3rem;
+  width: 70%;
+  margin-left: 6rem;
+
   ${Button} {
+    padding: 1rem 2rem;
+
     &:nth-of-type(even) {
       margin-left: 2rem;
     }
   }
 
   @media only screen and (max-width: 768px) {
-    width: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    ${Button} {
+      &:nth-of-type(even) {
+        margin: 1rem 0 0;
+      }
+    }
   }
 `;
 
-export const Welcome = styled.h4`
+export const Welcome = styled.p`
   color: ${({ theme }) => theme.medium};
-  font-size: 1rem;
   font-weight: 600;
+  margin: 0 0 0.3rem;
+
+  span {
+    color: ${({ theme }) => theme.light};
+  }
+
+  @media only screen and (max-width: 786px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export const Introduction = styled.div`
   margin-bottom: 1rem;
 
   h1 {
-    font-size: 3rem;
+    font-size: 6rem;
     color: ${({ theme }) => theme.special};
     font-weight: 800;
   }
@@ -68,12 +101,24 @@ export const Introduction = styled.div`
   h2 {
     font-style: italic;
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 992px) {
     h1 {
-      font-size: 2rem;
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 2rem;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
 
     h2 {
@@ -84,11 +129,10 @@ export const Introduction = styled.div`
 
 export const Portrait = styled.div`
   width: 60%;
-  height: 100%;
+  min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
-
   img {
     max-width: 100%;
     max-height: 100%;
@@ -103,6 +147,54 @@ export const Portrait = styled.div`
     background: ${({ theme }) => theme.special};
     width: 100%;
     height: 100%;
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(100% 8%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const ScrollDown = styled.div`
+  display: none;
+  height: 1.5rem;
+  width: 0.1rem;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: ${({ theme }) => theme.medium};
+  animation: ${bounce} 3s linear infinite;
+  transition: 300ms ease;
+
+  &::before,
+  &::after {
+    transition: 300ms ease;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0.5rem;
+    height: 0.1rem;
+    background: ${({ theme }) => theme.medium};
+  }
+
+  &::before {
+    left: calc(50% - 0.25rem);
+    transform: rotate(45deg) translateX(-50%);
+  }
+
+  &::after {
+    right: calc(50% - 0.32rem);
+    transform: rotate(135deg) translateX(-50%);
+  }
+
+  &:hover,
+  &:hover::after,
+  &:hover::before {
+    background: ${({ theme }) => theme.light};
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: block;
   }
 `;

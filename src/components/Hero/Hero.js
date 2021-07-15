@@ -6,6 +6,7 @@ import {
   Welcome,
   Introduction,
   Portrait,
+  ScrollDown,
 } from "./Hero.styled";
 import person from "../../assets/images/person.png";
 import { LinksList } from "../SocialMediaLinks/SocialMediaLinks.styled";
@@ -15,13 +16,15 @@ function Hero() {
   return (
     <StyledHero>
       <Wrapper>
-        <Welcome>Welcome! My name is...</Welcome>
+        <Welcome>
+          <span>Hi!</span> My name is...
+        </Welcome>
         <Introduction>
           <h1>Piotr Bątor</h1>
           <h2>Junior Frontend Developer</h2>
         </Introduction>
-        <Button bold>About me</Button>
-        <Button bold>See my work</Button>
+        <Button bold>Who am I?</Button>
+        <Button bold>My work</Button>
       </Wrapper>
       <Portrait>
         <div />
@@ -30,6 +33,7 @@ function Hero() {
       <LinksList aside>
         <SocialMediaLinks />
       </LinksList>
+      <ScrollDown />
     </StyledHero>
   );
 }
