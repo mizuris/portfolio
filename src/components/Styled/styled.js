@@ -41,6 +41,8 @@ export const Section = styled.section`
   @media only screen and (max-width: 768px) {
     &::before {
       font-size: 4rem;
+      bottom: 1rem;
+      right: 1rem;
     }
   }
 

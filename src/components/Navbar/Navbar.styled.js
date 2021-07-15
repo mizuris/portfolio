@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledNav = styled.div`
   z-index: 100;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
