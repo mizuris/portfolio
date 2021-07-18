@@ -23,8 +23,8 @@ function Header() {
           <h1>Piotr Bątor</h1>
           <h2>Junior Frontend Developer</h2>
         </Introduction>
-        <Button bold>Who am I?</Button>
-        <Button bold>My work</Button>
+        <Button>Who am I?</Button>
+        <Button>My work</Button>
       </Wrapper>
       <Portrait>
         <div />

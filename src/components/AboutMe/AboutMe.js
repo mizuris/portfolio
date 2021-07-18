@@ -25,9 +25,9 @@ function AboutMe() {
         <p>
           <i>4 years of experiance</i> as a Graphics Designer allowed me to dive
           into web development.
-          <p>
-            It's all about <i>details</i> and i do care for them.
-          </p>
+        </p>
+        <p>
+          It's all about <i>details</i> and i do care for them.
         </p>
       </Text>
       <Text>
@@ -41,13 +41,9 @@ function AboutMe() {
         </p>
       </Text>
       <Buttons>
-        <div>
-          <Button>My projects</Button>
-          <Button>My skills</Button>
-        </div>
-        <div>
-          <Button>Contact me</Button>
-        </div>
+        <Button>My projects</Button>
+        <Button>My skills</Button>
+        <Button>Contact me</Button>
       </Buttons>
     </StyledAboutMe>
   );

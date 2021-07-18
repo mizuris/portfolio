@@ -37,14 +37,19 @@ export const Text = styled.article`
 
 export const Buttons = styled.div`
   position: relative;
-  width: 50%;
+  width: 60%;
   display: flex;
-  justify-content: space-between;
   margin: 0 auto;
 
   ${Button} {
+    margin-left: 1rem;
+
     &:first-of-type {
-      margin-right: 1rem;
+      margin: 0;
+    }
+
+    &:last-of-type {
+      margin: 0 0 0 auto;
     }
   }
 
@@ -60,11 +65,18 @@ export const Buttons = styled.div`
 
   @media only screen and (max-width: 768px) {
     width: 60%;
-    flex-direction: column;
-    align-items: center;
   }
 
   @media only screen and (max-width: 576px) {
     width: 80%;
+    flex-direction: column;
+
+    ${Button} {
+      margin: 1rem 0;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
   }
 `;

@@ -32,7 +32,7 @@ export const Section = styled.section`
   &::before {
     content: attr(data-section);
     position: absolute;
-    bottom: 2rem;
+    top: 2rem;
     right: 2rem;
     font-size: 8rem;
     opacity: 0.1;
@@ -41,7 +41,7 @@ export const Section = styled.section`
   @media only screen and (max-width: 768px) {
     &::before {
       font-size: 4rem;
-      bottom: 1rem;
+      top: 1rem;
       right: 1rem;
     }
   }
@@ -57,12 +57,14 @@ export const Button = styled.button`
   border: none;
   outline: 0;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
   background: ${({ theme }) => theme.special};
   position: relative;
   padding: 0.5rem 1rem;
   color: ${({ theme }) => theme.mainDark};
   transition: 800ms all;
-  font-weight: ${({ bold }) => (bold ? "bold" : "regular")};
 
   &:hover {
     background: transparent;

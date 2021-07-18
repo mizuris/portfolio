@@ -4,6 +4,7 @@ import { Section } from "./components/Styled/styled";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import AboutMe from "./components/AboutMe/AboutMe";
+import Projects from "./components/Projects/Projects";
 
 const StyledApp = styled.main`
   position: relative;
@@ -18,7 +19,9 @@ function App() {
       <Section flex centered data-section="About">
         <AboutMe />
       </Section>
-      <Section data-section="Projects"></Section>
+      <Section data-section="Projects">
+        <Projects />
+      </Section>
       <Section data-section="Skills"></Section>
       <Section data-section="Contact"></Section>
     </StyledApp>
