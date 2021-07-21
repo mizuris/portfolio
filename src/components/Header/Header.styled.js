@@ -62,8 +62,8 @@ export const Wrapper = styled.div`
   ${Button} {
     padding: 1rem 2rem;
 
-    &:nth-of-type(even) {
-      margin-left: 2rem;
+    &:hover svg {
+      transform: rotate(90deg);
     }
   }
 
@@ -71,12 +71,6 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-
-    ${Button} {
-      &:nth-of-type(even) {
-        margin: 1rem 0 0;
-      }
-    }
   }
 `;
 

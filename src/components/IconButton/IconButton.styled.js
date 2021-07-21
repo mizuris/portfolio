@@ -24,16 +24,18 @@ export const ButtonBase = styled(Button)`
 
   &:hover svg {
     stroke: ${({ theme }) => theme.mainDark};
-    transform: rotate(90deg);
+    fill: ${({ theme }) => theme.mainDark};
   }
 
   span {
     color: ${({ theme }) => theme.special};
     margin-right: 1rem;
+    transition: 400ms ease-out all;
   }
 
   svg {
-    stroke: ${({ theme }) => theme.special};
     transition: 400ms ease-out all;
+    stroke: ${({ theme }) => theme.special};
+    fill: ${({ theme }) => theme.special};
   }
 `;

@@ -9,7 +9,7 @@ function Header() {
   return (
     <StyledHeader>
       <Wrapper as="header">
-        <Welcome>Hi, my name is</Welcome>
+        <Welcome>Hi 👋, my name is</Welcome>
         <Introduction>
           <h1>Piotr Bątor</h1>
           <h2>Junior Frontend Developer &amp; Graphics Designer</h2>

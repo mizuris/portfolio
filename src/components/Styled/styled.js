@@ -30,6 +30,7 @@ export const Section = styled.section`
     right: 2rem;
     font-size: 8rem;
     opacity: 0.1;
+    text-transform: uppercase;
   }
 
   &::after {
@@ -120,6 +121,6 @@ export const Button = styled.button`
 `;
 
 export const Wrapper = styled.div`
-  width: 70%;
+  width: 90%;
   z-index: 2;
 `;

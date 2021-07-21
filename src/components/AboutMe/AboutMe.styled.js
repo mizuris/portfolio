@@ -1,99 +1,159 @@
 import styled from "styled-components";
+import { Wrapper } from "../Styled/styled";
 
 export const StyledAboutMe = styled.div`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 4rem 0;
 
-  @media only screen and (max-width: 576px) {
-    padding: 4rem 0;
+  ${Wrapper} {
+    margin: 0 auto;
+  }
+
+  @media only screen and (min-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+
+    ${Wrapper} {
+      width: 100%;
+      padding: 0 4rem;
+    }
   }
 `;
 
 export const Heading = styled.h3`
-  font-size: 1rem;
+  font-size: 1.3rem;
   width: fit-content;
   color: ${({ theme }) => theme.special};
+  margin-bottom: 2rem;
   position: relative;
 
-  &::after {
+  &::before {
     content: "";
-    width: 50%;
-    height: 0.2rem;
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 0;
+    bottom: 0;
+    width: 40%;
+    height: 0.05rem;
     background: ${({ theme }) => theme.medium};
   }
 `;
 
-// export const Text = styled.article`
-//   width: 60%;
-//   margin: 2rem auto;
+export const Text = styled.div`
+  width: 100%;
 
-//   h2 {
-//     font-size: 2rem;
-//     color: ${({ theme }) => theme.special};
-//     margin-bottom: 0.5rem;
-//   }
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+    text-justify: inter-word;
 
-//   p {
-//     font-size: 0.9rem;
-//     line-height: 2rem;
+    em {
+      color: ${({ theme }) => theme.special};
+      position: relative;
+      font-weight: 500;
+      cursor: pointer;
 
-//     i {
-//       color: ${({ theme }) => theme.special};
-//       font-weight: 500;
-//     }
-//   }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 0.05rem;
+        background: ${({ theme }) => theme.special};
+        transition: 200ms ease width;
+      }
 
-//   @media only screen and (max-width: 576px) {
-//     width: 80%;
-//   }
-// `;
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+`;
 
-// export const Buttons = styled.div`
-//   position: relative;
-//   width: 60%;
-//   display: flex;
-//   margin: 0 auto;
+export const Container = styled.div`
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+`;
 
-//   ${Button} {
-//     margin-left: 1rem;
+export const Photo = styled.div`
+  width: 90%;
+  position: relative;
+  z-index: 3;
 
-//     &:first-of-type {
-//       margin: 0;
-//     }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border: 0.3rem solid ${({ theme }) => theme.special};
+    width: 10rem;
+    height: 10rem;
+    z-index: -1;
+    transition: 500ms ease-out all;
+  }
 
-//     &:last-of-type {
-//       margin: 0 0 0 auto;
-//     }
-//   }
+  &::before {
+    top: -1rem;
+    left: -1rem;
+  }
 
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: -1rem;
-//     left: 0;
-//     width: 100%;
-//     height: 0.1rem;
-//     background-color: ${({ theme }) => theme.medium};
-//   }
+  &::after {
+    bottom: -1rem;
+    right: -1rem;
+  }
 
-//   @media only screen and (max-width: 768px) {
-//     width: 60%;
-//   }
+  img {
+    filter: grayscale(100%);
+    max-width: 100%;
+    max-height: 100%;
+    transition: 600ms ease-out all;
+  }
 
-//   @media only screen and (max-width: 576px) {
-//     width: 80%;
-//     flex-direction: column;
+  &:hover img {
+    filter: grayscale(0);
+  }
 
-//     ${Button} {
-//       margin: 1rem 0;
+  &:hover::before {
+    transform: translate(0.5rem, 0.5rem);
+    background: ${({ theme }) => theme.special};
+  }
 
-//       &:last-of-type {
-//         margin: 0;
-//       }
-//     }
-//   }
-// `;
+  &:hover::after {
+    transform: translate(-0.5rem, -0.7rem);
+    background: ${({ theme }) => theme.special};
+  }
+`;
+
+export const SkillsList = styled.ul`
+  list-style: none;
+  margin: 2rem 0 4rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(8rem, 12rem));
+
+  li {
+    position: relative;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+
+    &::before {
+      content: "⊳";
+      position: absolute;
+      left: 0;
+      color: ${({ theme }) => theme.special};
+    }
+  }
+`;

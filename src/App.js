@@ -16,7 +16,7 @@ function App() {
     <StyledApp>
       <Navbar />
       <Header />
-      <Section flex centered data-section="About">
+      <Section flex centered data-section="Bio">
         <AboutMe />
       </Section>
       <Section data-section="Projects">
