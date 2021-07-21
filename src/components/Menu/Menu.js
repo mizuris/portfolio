@@ -1,7 +1,6 @@
 import React from "react";
 import { StyledMenu } from "./Menu.styled";
 import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
-import { LinksList } from "../SocialMediaLinks/SocialMediaLinks.styled";
 
 function Menu({ open }) {
   return (
@@ -21,9 +20,7 @@ function Menu({ open }) {
       <a data-link="Contact" href="#!">
         Contact
       </a>
-      <LinksList>
-        <SocialMediaLinks />
-      </LinksList>
+      <SocialMediaLinks />
     </StyledMenu>
   );
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LinksList } from "../SocialMediaLinks/SocialMediaLinks.styled";
 
 export const StyledMenu = styled.nav`
   display: flex;
@@ -16,6 +17,13 @@ export const StyledMenu = styled.nav`
   transition: transform 0.3s ease-in-out;
   z-index: 9;
   background-attachment: fixed;
+
+  ${LinksList} {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   a {
     font-size: 1rem;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
+  z-index: 1;
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -21,14 +22,7 @@ export const Section = styled.section`
       };
     }
   }}
-
-  &:nth-of-type(odd) {
-    background: ${({ theme }) => theme.mainDark};
-  }
-  &:nth-of-type(even) {
-    background: ${({ theme }) => theme.secondaryDark};
-  }
-
+  
   &::before {
     content: attr(data-section);
     position: absolute;
@@ -36,6 +30,34 @@ export const Section = styled.section`
     right: 2rem;
     font-size: 8rem;
     opacity: 0.1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -0.2rem;
+    width: 20%;
+    height: 0.4rem;
+    background: ${({ theme }) => theme.special};
+  }
+
+  &:nth-of-type(odd) {
+    background: ${({ theme }) => theme.mainDark};
+    &::after {
+      right: 0;
+    }
+  }
+  &:nth-of-type(even) {
+    background: ${({ theme }) => theme.secondaryDark};
+    &::after {
+      left: 0;
+    }
+  }
+
+  &:first-of-type {
+    &::after {
+      display: none;
+    }
   }
 
   @media only screen and (max-width: 768px) {
@@ -95,4 +117,9 @@ export const Button = styled.button`
     width: 100%;
     transition: 800ms ease all;
   }
+`;
+
+export const Wrapper = styled.div`
+  width: 70%;
+  z-index: 2;
 `;

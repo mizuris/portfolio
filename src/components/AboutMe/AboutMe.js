@@ -1,11 +1,14 @@
 import React from "react";
-import { Buttons, StyledAboutMe, Text } from "./AboutMe.styled";
-import { Button } from "../Styled/styled";
+import { Buttons, Heading, StyledAboutMe } from "./AboutMe.styled";
+import { Button, Wrapper } from "../Styled/styled";
 
 function AboutMe() {
   return (
     <StyledAboutMe>
-      <Text>
+      <Wrapper>
+        <Heading>About me</Heading>
+      </Wrapper>
+      {/* <Text>
         <h2>Who am I?</h2>
         <p>
           I'm <b>Piotr Bątor</b> - <i>Junior Frontend Developer</i> and{" "}
@@ -44,7 +47,7 @@ function AboutMe() {
         <Button>My projects</Button>
         <Button>My skills</Button>
         <Button>Contact me</Button>
-      </Buttons>
+      </Buttons> */}
     </StyledAboutMe>
   );
 }

@@ -1,27 +1,12 @@
 import styled from "styled-components";
 
 export const LinksList = styled.ul`
-  position: absolute;
   list-style: none;
   display: flex;
   align-items: center;
   z-index: 8;
-  ${({ aside }) => {
-    if (aside) {
-      return {
-        right: "1rem",
-        top: "50%",
-        flexDirection: "column",
-        transform: "translateY(-50%)",
-      };
-    }
-    return {
-      left: "50%",
-      bottom: "1rem",
-      flexDirection: "row",
-      transform: "translateX(-50%)",
-    };
-  }}
+  flex-direction: row;
+  transform: translateX(-50%);
 
   li {
     padding: 1rem;
@@ -35,12 +20,12 @@ export const LinksList = styled.ul`
       text-decoration: none;
       transition: 500ms linear;
       position: relative;
-      z-index: 1;
+      z-index: 2;
       margin: auto;
       padding: 0;
 
       svg {
-        fill: ${({ theme }) => theme.medium};
+        fill: ${({ theme }) => theme.special};
         margin: auto;
         transition: 300ms linear;
       }
