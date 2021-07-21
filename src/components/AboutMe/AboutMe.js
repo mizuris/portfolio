@@ -26,7 +26,8 @@ function AboutMe() {
             I've been creating <em>aesthetic</em> and <em>tidy designs</em> for
             past <em>4&nbsp;years</em>. My career as developer started a year
             ago, since then i managed to finish a couple of{" "}
-            <em>freelance projects.</em>
+            <em>freelance projects.</em> All of my websites and apps are fully{" "}
+            <em>responsive.</em>
           </p>
           <p>
             Some <em>technologies</em> that i'm familiar to:
@@ -48,6 +49,7 @@ function AboutMe() {
       <Container>
         <Photo>
           <img src={person} alt="person" />
+          <span>Yep... It's me! 🙋‍♂️</span>
         </Photo>
       </Container>
     </StyledAboutMe>

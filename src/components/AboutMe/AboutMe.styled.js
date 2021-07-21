@@ -28,7 +28,7 @@ export const StyledAboutMe = styled.div`
 `;
 
 export const Heading = styled.h3`
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   width: fit-content;
   color: ${({ theme }) => theme.special};
   margin-bottom: 2rem;
@@ -92,6 +92,24 @@ export const Photo = styled.div`
   position: relative;
   z-index: 3;
 
+  img {
+    filter: grayscale(100%);
+    max-width: 100%;
+    max-height: 100%;
+    transition: 600ms ease-out all;
+  }
+
+  span {
+    position: absolute;
+    font-size: 0.8rem;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    transition: 400ms ease-in all;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -113,15 +131,12 @@ export const Photo = styled.div`
     right: -1rem;
   }
 
-  img {
-    filter: grayscale(100%);
-    max-width: 100%;
-    max-height: 100%;
-    transition: 600ms ease-out all;
-  }
-
   &:hover img {
     filter: grayscale(0);
+  }
+
+  &:hover span {
+    opacity: 1;
   }
 
   &:hover::before {

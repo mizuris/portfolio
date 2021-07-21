@@ -13,6 +13,7 @@ export const projects = [
     image: carwallet,
     liveVersion: "https://mizuris.github.io/car-wallet-react/",
     repository: "https://github.com/mizuris/car-wallet-react",
+    technologies: ["React", "JavaScript", "Firebase", "Bootstrap", "SCSS"],
   },
   {
     id: 2,
@@ -21,6 +22,13 @@ export const projects = [
     image: cookbook,
     liveVersion: "https://mizuris.github.io/cookbook-app/",
     repository: "https://github.com/mizuris/cookbook-app",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Redux",
+      "Material-UI",
+      "Framer-motion",
+    ],
   },
   {
     id: 3,
@@ -29,6 +37,7 @@ export const projects = [
     image: boredomApp,
     liveVersion: "https://admiring-hamilton-70feae.netlify.app/",
     repository: "https://github.com/mizuris/boredom-app",
+    technologies: ["React", "JavaScript", "Framer-motion", "CSS"],
   },
   {
     id: 4,
@@ -37,6 +46,7 @@ export const projects = [
     image: qrcodecenter,
     liveVersion: "https://mizuris.github.io/qr-code-generator/",
     repository: "https://github.com/mizuris/qr-code-generator",
+    technologies: ["React", "TypeScript", "Bootstrap", "CSS"],
   },
   {
     id: 5,
@@ -45,6 +55,7 @@ export const projects = [
     image: artpoz,
     liveVersion: "https://artpoz-bhp.pl/",
     repository: "https://github.com/mizuris/artpoz-bhp",
+    technologies: ["Next.js", "Bootstrap", "Bootstrap"],
   },
   {
     id: 6,
@@ -53,5 +64,6 @@ export const projects = [
     image: montage,
     liveVersion: "https://montage-com.vercel.app/",
     repository: "https://github.com/mizuris/montage",
+    technologies: ["Next.js", "Bootstrap"],
   },
 ];
