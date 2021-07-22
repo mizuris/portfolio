@@ -4,8 +4,8 @@ import { ButtonBase } from "./IconButton.styled";
 function IconButton({ text, icon }) {
   return (
     <ButtonBase>
-      <span>{text}</span>
-      {icon}
+      {text && <span>{text}</span>}
+      {icon && icon}
     </ButtonBase>
   );
 }

@@ -1,24 +1,31 @@
 import React from "react";
 import {
+  Description,
+  Name,
+  ProjectContainer,
   ProjectContent,
-  ProjectDescription,
   ProjectImage,
-  StyledProject,
+  OpenIcon,
 } from "./Projects.styled";
+import { BiLinkExternal } from "react-icons/bi";
 
 function Project({ project }) {
-  const { name, shortDescription, image } = project;
+  const { name, shortDescription, image, technologies } = project;
   return (
-    <StyledProject>
+    <ProjectContainer>
       <ProjectContent>
-        <h1>FEATURED PROJECT</h1>
-        <h2>{name}</h2>
-        <ProjectDescription>{shortDescription}</ProjectDescription>
+        <Name>{name}</Name>
+        <Description>{shortDescription}</Description>
       </ProjectContent>
+      <OpenIcon>
+        <BiLinkExternal />
+      </OpenIcon>
       <ProjectImage>
-        <img src={image} alt="project thumbnail" />
+        <a href="#!">
+          <img src={image} alt="" />
+        </a>
       </ProjectImage>
-    </StyledProject>
+    </ProjectContainer>
   );
 }
 

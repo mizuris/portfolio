@@ -9,7 +9,25 @@ export const projects = [
   {
     id: 1,
     name: "CarWallet",
-    shortDescription: "Virtual garage for your vehicles.",
+    shortDescription: "Virtual garage for your vehicles",
+    detailedDescription: (
+      <>
+        <p>
+          Virtual garage for your vehicles created with <em>ReactJS</em>. Styled
+          applied with Bootstrap and SCSS. CarWallet allows you to add your own,
+          or your dream vehicles to the list.
+        </p>
+        <p>
+          CarWallet is using <em>Firebase</em> to store uploaded images of your
+          cars. State of cars list is saved in your local storage, so it
+          persists when you leave the app.
+        </p>
+        <p>
+          You can freely add, edit and remove vehicles from the list. State
+          between components is shared thanks to <em>Context API.</em>
+        </p>
+      </>
+    ),
     image: carwallet,
     liveVersion: "https://mizuris.github.io/car-wallet-react/",
     repository: "https://github.com/mizuris/car-wallet-react",

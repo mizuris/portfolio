@@ -25,12 +25,12 @@ function AboutMe() {
           <p>
             I've been creating <em>aesthetic</em> and <em>tidy designs</em> for
             past <em>4&nbsp;years</em>. My career as developer started a year
-            ago, since then i managed to finish a couple of{" "}
+            ago, since then I managed to finish a couple of{" "}
             <em>freelance projects.</em> All of my websites and apps are fully{" "}
             <em>responsive.</em>
           </p>
           <p>
-            Some <em>technologies</em> that i'm familiar to:
+            Some <em>technologies</em> that I'm familiar to:
           </p>
         </Text>
         <SkillsList>
