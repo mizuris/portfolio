@@ -5,25 +5,21 @@ import {
   ProjectContainer,
   ProjectContent,
   ProjectImage,
-  OpenIcon,
 } from "./Projects.styled";
+import IconButton from "../IconButton/IconButton";
 import { BiLinkExternal } from "react-icons/bi";
 
 function Project({ project }) {
-  const { name, shortDescription, image, technologies } = project;
+  const { id, name, shortDescription, image } = project;
   return (
-    <ProjectContainer>
+    <ProjectContainer data-number={id}>
       <ProjectContent>
-        <Name>{name}</Name>
+        <Name href="#!">{name}</Name>
         <Description>{shortDescription}</Description>
+        <IconButton text="Read more" icon={<BiLinkExternal />} />
       </ProjectContent>
-      <OpenIcon>
-        <BiLinkExternal />
-      </OpenIcon>
-      <ProjectImage>
-        <a href="#!">
-          <img src={image} alt="" />
-        </a>
+      <ProjectImage href="#!">
+        <img src={image} alt={`${name} screenshot`} />
       </ProjectImage>
     </ProjectContainer>
   );

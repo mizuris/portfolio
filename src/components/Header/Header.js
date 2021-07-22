@@ -14,7 +14,7 @@ function Header() {
           <h1>Piotr Bątor</h1>
           <h2>Junior Frontend Developer &amp; Graphics Designer</h2>
         </Introduction>
-        <IconButton text="Check my work" icon={<FiArrowRight />} />
+        <IconButton text="Check out my work" icon={<FiArrowRight />} />
       </Wrapper>
       <SocialMediaLinks />
       <ParticlesBackground />

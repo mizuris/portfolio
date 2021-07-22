@@ -9,7 +9,8 @@ export const projects = [
   {
     id: 1,
     name: "CarWallet",
-    shortDescription: "Virtual garage for your vehicles",
+    shortDescription:
+      "Virtual garage for your vehicles. App uses form validation to add and edit vehicles in your list.",
     detailedDescription: (
       <>
         <p>
@@ -36,7 +37,8 @@ export const projects = [
   {
     id: 2,
     name: "Cookbook App",
-    shortDescription: "Recipe finder with descriptions and favorites list.",
+    shortDescription:
+      "Online recipe book. Cookbook allows you to find your favorites recipes and add or remove them from favorites list. App uses external API.",
     image: cookbook,
     liveVersion: "https://mizuris.github.io/cookbook-app/",
     repository: "https://github.com/mizuris/cookbook-app",
@@ -51,7 +53,8 @@ export const projects = [
   {
     id: 3,
     name: "Boredom App",
-    shortDescription: "Random activity generator.",
+    shortDescription:
+      "Simple app that generates random activities and their descriptions.",
     image: boredomApp,
     liveVersion: "https://admiring-hamilton-70feae.netlify.app/",
     repository: "https://github.com/mizuris/boredom-app",
@@ -60,7 +63,8 @@ export const projects = [
   {
     id: 4,
     name: "QR Code center",
-    shortDescription: "QR Code scanner and reader for all devices.",
+    shortDescription:
+      "Lightweight app that allows you to scan and generate QR codes. Reader is avalible for all devices equiped with camera.",
     image: qrcodecenter,
     liveVersion: "https://mizuris.github.io/qr-code-generator/",
     repository: "https://github.com/mizuris/qr-code-generator",
@@ -69,7 +73,8 @@ export const projects = [
   {
     id: 5,
     name: "Artpoż",
-    shortDescription: "Work safety equipement dealer.",
+    shortDescription:
+      "Local work and safety equipement dealer. Website is re-designed to look fresh and simple.",
     image: artpoz,
     liveVersion: "https://artpoz-bhp.pl/",
     repository: "https://github.com/mizuris/artpoz-bhp",
@@ -77,8 +82,9 @@ export const projects = [
   },
   {
     id: 6,
-    name: "Montage Sp. z o.o.",
-    shortDescription: "European building company.",
+    name: "Montage",
+    shortDescription:
+      "Official website for European building company. It provides crucial informations about jobs availible in this company, and runs simple mail sender.",
     image: montage,
     liveVersion: "https://montage-com.vercel.app/",
     repository: "https://github.com/mizuris/montage",

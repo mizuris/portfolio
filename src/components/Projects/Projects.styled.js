@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 //PROJECTS.JS
 export const StyledProjects = styled.div`
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
   padding: 6rem 0;
 `;
 
@@ -11,79 +10,133 @@ export const ProjectsList = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-
-  @media only screen and (max-width: 992px) {
-    grid-template-columns: 1fr;
-  }
 `;
 
 //PROJECT.JS
 export const ProjectContainer = styled.li`
-  text-decoration: none;
-  min-height: 20rem;
   position: relative;
+  width: 90%;
+  min-height: 20rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border-radius: 1rem;
-  overflow: hidden;
-  width: 80%;
   margin: 2rem auto;
-  padding: 4rem 1.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  overflow: hidden;
+
+  &::before {
+    content: "0" attr(data-number);
+    color: ${({ theme }) => theme.light};
+    opacity: 0.3;
+    position: absolute;
+    top: 5%;
+    line-height: 1rem;
+    font-size: 8rem;
+    font-family: "Zen Tokyo Zoo", cursive;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0.2rem;
+    background: ${({ theme }) => theme.medium};
+  }
+
+  &:nth-of-type(even) {
+    &::before {
+      left: 1rem;
+    }
+  }
+
+  &:nth-of-type(odd) {
+    &::before {
+      right: 1rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    width: 80%;
+
+    &:nth-of-type(even),
+    &:nth-of-type(odd) {
+      &::before {
+        left: 0;
+      }
+    }
+
+    &::after {
+      width: 60%;
+    }
+  }
 `;
 
 export const ProjectContent = styled.div`
   z-index: 2;
+  padding: 1rem;
+  margin: auto auto auto 0;
+
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+    padding: 3rem 3rem 3rem 0rem;
+  }
 `;
 
-export const Name = styled.h1`
-  font-size: 1.5rem;
+export const Name = styled.a`
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
   color: ${({ theme }) => theme.special};
 `;
 
 export const Description = styled.p`
   font-size: 0.8rem;
-  margin: 1rem 0;
+  margin: 0.5rem 0 2rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  line-height: 1.2rem;
 `;
 
-export const Technologies = styled.ul`
-  list-style: none;
-  display: flex;
-  align-items: center;
-
-  li {
-    font-size: 0.6rem;
-    padding: 0.3rem 1rem;
-    background: ${({ theme }) => theme.special};
-    border-radius: 1rem;
-    margin: 0 0.5rem;
-    color: ${({ theme }) => theme.mainDark};
-  }
-`;
-
-export const ProjectImage = styled.div`
+export const ProjectImage = styled.a`
+  display: block;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  pointer-events: none;
 
-  a {
-    cursor: pointer;
-
-    img {
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  img {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-`;
 
-export const OpenIcon = styled.div`
-  z-index: 2;
-  font-size: 1.3rem;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: ${({ theme }) => theme.secondaryDark};
+    opacity: 0.8;
+    transition: 400ms ease-out all;
+  }
 
-  svg {
-    fill: ${({ theme }) => theme.special};
+  @media only screen and (min-width: 768px) {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    pointer-events: all;
+
+    &:hover::before {
+      opacity: 0.2;
+    }
   }
 `;

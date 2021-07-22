@@ -28,7 +28,7 @@ export const Section = styled.section`
     position: absolute;
     top: 2rem;
     right: 2rem;
-    font-size: 8rem;
+    font-size: 6rem;
     opacity: 0.1;
     text-transform: uppercase;
   }
@@ -61,9 +61,9 @@ export const Section = styled.section`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 992px) {
     &::before {
-      font-size: 4rem;
+      font-size: 3rem;
       top: 1rem;
       right: 1rem;
     }
