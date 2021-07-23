@@ -4,8 +4,8 @@ import Burger from "../Burger/Burger";
 import Logo from "../Logo/Logo";
 import Menu from "../Menu/Menu";
 
-function Navbar() {
-  const [open, setOpen] = useState(false);
+function Navbar({ open, setOpen }) {
+  // const [open, setOpen] = useState(false);
   const [isTransparent, setIsTransparent] = useState(true);
 
   useEffect(() => {

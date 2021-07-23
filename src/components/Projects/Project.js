@@ -9,16 +9,20 @@ import {
 import IconButton from "../IconButton/IconButton";
 import { BiLinkExternal } from "react-icons/bi";
 
-function Project({ project }) {
+function Project({ project, openDrawerById }) {
   const { id, name, shortDescription, image } = project;
   return (
     <ProjectContainer data-number={id}>
       <ProjectContent>
-        <Name href="#!">{name}</Name>
+        <Name onClick={() => openDrawerById(id)}>{name}</Name>
         <Description>{shortDescription}</Description>
-        <IconButton text="Read more" icon={<BiLinkExternal />} />
+        <IconButton
+          onClick={() => openDrawerById(id)}
+          text="Read more"
+          icon={<BiLinkExternal />}
+        />
       </ProjectContent>
-      <ProjectImage href="#!">
+      <ProjectImage onClick={() => openDrawerById(id)}>
         <img src={image} alt={`${name} screenshot`} />
       </ProjectImage>
     </ProjectContainer>

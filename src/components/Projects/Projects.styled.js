@@ -30,6 +30,7 @@ export const ProjectContainer = styled.li`
     opacity: 0.3;
     position: absolute;
     top: 5%;
+    right: 1rem;
     line-height: 1rem;
     font-size: 8rem;
     font-family: "Zen Tokyo Zoo", cursive;
@@ -40,35 +41,21 @@ export const ProjectContainer = styled.li`
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -2rem;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
-    height: 0.2rem;
+    height: 0.1rem;
     background: ${({ theme }) => theme.medium};
-  }
-
-  &:nth-of-type(even) {
-    &::before {
-      left: 1rem;
-    }
-  }
-
-  &:nth-of-type(odd) {
-    &::before {
-      right: 1rem;
-    }
   }
 
   @media only screen and (min-width: 768px) {
     flex-direction: row;
     width: 80%;
+    overflow: visible;
 
-    &:nth-of-type(even),
-    &:nth-of-type(odd) {
-      &::before {
-        left: 0;
-      }
+    &::before {
+      left: 0;
     }
 
     &::after {
@@ -89,10 +76,31 @@ export const ProjectContent = styled.div`
 `;
 
 export const Name = styled.a`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
   color: ${({ theme }) => theme.special};
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.1rem;
+    background: ${({ theme }) => theme.special};
+    transition: 200ms ease-in width;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 export const Description = styled.p`
@@ -109,6 +117,7 @@ export const ProjectImage = styled.a`
   top: 0;
   left: 0;
   pointer-events: none;
+  cursor: pointer;
 
   img {
     z-index: -1;

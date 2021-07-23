@@ -1,16 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { ProjectsList, StyledProjects } from "./Projects.styled";
 import Project from "./Project";
 import { projects } from "../../data/projects";
+import Drawer from "../Drawer/Drawer";
 
-function Projects() {
+function Projects({ drawerOpen, setDrawerOpen }) {
+  const [projectToDisplay, setProjectToDisplay] = useState(projects[0]);
+
+  const openDrawerWithProject = (id) => {
+    if (!drawerOpen) {
+      setDrawerOpen(true);
+    }
+    const desiredProject = projects.find((project) => project.id === id);
+    setProjectToDisplay(desiredProject);
+  };
+
   return (
     <StyledProjects>
-      <ProjectsList>
+      <ProjectsList open={drawerOpen}>
         {projects.map((project) => {
-          return <Project key={project.id} project={project} />;
+          return (
+            <Project
+              key={project.id}
+              project={project}
+              openDrawerById={openDrawerWithProject}
+            />
+          );
         })}
       </ProjectsList>
+      {projectToDisplay && (
+        <Drawer
+          project={projectToDisplay}
+          open={drawerOpen}
+          setOpen={setDrawerOpen}
+        />
+      )}
     </StyledProjects>
   );
 }
