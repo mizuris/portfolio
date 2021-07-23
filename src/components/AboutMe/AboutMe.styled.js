@@ -82,6 +82,7 @@ export const Text = styled.div`
 export const Container = styled.div`
   width: 60%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -91,6 +92,7 @@ export const Photo = styled.div`
   width: 90%;
   position: relative;
   z-index: 3;
+  margin-top: 4rem;
 
   img {
     filter: grayscale(100%);
@@ -174,7 +176,7 @@ export const SkillsList = styled.ul`
 `;
 
 export const Note = styled.p`
-  font-size: 0.7rem;
-  margin-bottom: 4rem;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
   color: ${({ theme }) => theme.medium};
 `;

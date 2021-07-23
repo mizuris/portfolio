@@ -26,7 +26,7 @@ export const StyledMenu = styled.nav`
   }
 
   a {
-    font-size: 1rem;
+    font-size: 3rem;
     text-transform: uppercase;
     position: relative;
     padding: 1.2rem 0;
@@ -54,7 +54,7 @@ export const StyledMenu = styled.nav`
       left: 50%;
       transform: translate(-50%, -50%);
       white-space: nowrap;
-      font-size: 3rem;
+      font-size: 6rem;
       color: ${({ theme }) => theme.secondaryDark};
       z-index: -1;
       opacity: 0;
@@ -70,6 +70,26 @@ export const StyledMenu = styled.nav`
 
       &::after {
         opacity: 0.5;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    a {
+      font-size: 2rem;
+
+      &::after {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    a {
+      font-size: 1rem;
+
+      &::after {
+        font-size: 2rem;
       }
     }
   }

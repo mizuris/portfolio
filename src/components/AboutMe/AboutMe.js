@@ -8,7 +8,7 @@ import {
   Text,
   Note,
 } from "./AboutMe.styled";
-import { Wrapper } from "../Styled/styled";
+import { Button, Wrapper } from "../Styled/styled";
 import person from "../../assets/images/person.jpg";
 
 function AboutMe() {
@@ -49,6 +49,7 @@ function AboutMe() {
           <li>Angular*</li>
         </SkillsList>
         <Note>* - BASIC KNOWLEDGE, OR RARELY USED</Note>
+        <Button>Download resume</Button>
       </Wrapper>
       <Container>
         <Photo>

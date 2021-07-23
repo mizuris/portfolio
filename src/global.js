@@ -20,6 +20,23 @@ export const GlobalStyles = createGlobalStyle`
 
     html, body {
         -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        -moz-osx-font-smoothing: grayscale; 
+    }
+
+    ::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: ${({ theme }) => theme.mainDark};
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${({ theme }) => theme.medium};
+        border-radius: 1rem;
+        
+        &:hover {
+            background: ${({ theme }) => theme.special};
+        }
     }
 `;

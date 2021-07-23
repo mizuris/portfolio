@@ -11,9 +11,6 @@ function Menu({ open }) {
       <a data-link="About me" href="#!">
         About me
       </a>
-      <a data-link="Skills" href="#!">
-        Skills
-      </a>
       <a data-link="Projects" href="#!">
         Projects
       </a>

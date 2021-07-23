@@ -14,9 +14,9 @@ export const LinksList = styled.ul`
     a {
       display: inline-flex;
       align-items: center;
-      font-size: 1.5rem;
-      width: 3rem;
-      height: 3rem;
+      font-size: 2rem;
+      width: 4rem;
+      height: 4rem;
       text-decoration: none;
       transition: 500ms linear;
       position: relative;
@@ -41,8 +41,8 @@ export const LinksList = styled.ul`
         left: 0;
         right: 0;
         bottom: 0;
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
         background: ${({ theme }) => theme.light};
         border-radius: 50%;
         z-index: -1;
