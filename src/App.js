@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
 
 const StyledApp = styled.main`
   position: relative;
@@ -17,15 +18,6 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    }
-    if (!menuOpen) {
-      document.body.style.overflow = "visible";
-    }
-  }, [menuOpen]);
-
-  useEffect(() => {
     if (drawerOpen) {
       document.body.style.overflow = "hidden";
     }
@@ -33,6 +25,15 @@ function App() {
       document.body.style.overflow = "visible";
     }
   }, [drawerOpen]);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    }
+    if (!menuOpen) {
+      document.body.style.overflow = "visible";
+    }
+  }, [menuOpen]);
 
   return (
     <StyledApp>
@@ -44,8 +45,7 @@ function App() {
       <Section data-section="Projects">
         <Projects drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
       </Section>
-      <Section data-section="Skills"></Section>
-      <Section data-section="Contact"></Section>
+      <Contact />
     </StyledApp>
   );
 }

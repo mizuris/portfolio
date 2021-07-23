@@ -6,8 +6,10 @@ export const Section = styled.section`
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  flex-direction: column;
   display: ${({ flex }) => (flex ? "flex" : "block")};
   align-items: ${({ centered }) => (centered ? "center" : "stretch")};
+  justify-content: ${({ centered }) => (centered ? "center" : "flex-start")};
   ${({ evenly }) => {
     if (evenly) {
       return {

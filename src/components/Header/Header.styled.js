@@ -9,7 +9,7 @@ export const StyledHeader = styled(Section)`
   height: 100%;
   display: flex;
   align-items: center;
-
+  
   @media screen and (min-width: 769px) {
     ${LinksList} {
       position: absolute;
@@ -17,7 +17,7 @@ export const StyledHeader = styled(Section)`
       top: 50%;
       transform: translateY(-50%);
       flex-direction: column;
-
+      
       &::after {
         content: "";
         position: absolute;
@@ -30,7 +30,7 @@ export const StyledHeader = styled(Section)`
       }
     }
   }
-
+  
   @media screen and (max-width: 768px) {
     ${LinksList} {
       position: absolute;
@@ -38,27 +38,27 @@ export const StyledHeader = styled(Section)`
       left: 50%;
       transform: translateX(-50%);
       flex-direction: row;
-
+      
       li {
         padding: 0.6rem;
       }
-
+      
       a {
         font-size: 1.3rem;
       }
-
+      
       &::after {
         display: none;
       }
     }
   }
-`;
+  `;
 
 export const Wrapper = styled.div`
+  margin: auto;
   width: 70%;
-  margin: 0 auto;
   z-index: 2;
-
+  
   ${Button} {
     padding: 1rem 2rem;
 
@@ -70,7 +70,6 @@ export const Wrapper = styled.div`
   @media only screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
   }
 `;
 

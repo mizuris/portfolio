@@ -47,11 +47,11 @@ export const Heading = styled.h3`
 
 export const Text = styled.div`
   width: 100%;
+  line-height: 1.5rem;
 
   p {
     font-size: 0.9rem;
     margin-bottom: 1rem;
-    line-height: 1.5rem;
     text-align: justify;
     text-justify: inter-word;
 
@@ -152,7 +152,7 @@ export const Photo = styled.div`
 
 export const SkillsList = styled.ul`
   list-style: none;
-  margin: 2rem 0 4rem;
+  margin: 2rem 0 1rem;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, minmax(8rem, 12rem));
@@ -171,4 +171,10 @@ export const SkillsList = styled.ul`
       color: ${({ theme }) => theme.special};
     }
   }
+`;
+
+export const Note = styled.p`
+  font-size: 0.7rem;
+  margin-bottom: 4rem;
+  color: ${({ theme }) => theme.medium};
 `;

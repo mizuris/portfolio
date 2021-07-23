@@ -6,6 +6,7 @@ import {
   SkillsList,
   StyledAboutMe,
   Text,
+  Note,
 } from "./AboutMe.styled";
 import { Wrapper } from "../Styled/styled";
 import person from "../../assets/images/person.jpg";
@@ -41,10 +42,13 @@ function AboutMe() {
           <li>SCSS/SASS</li>
           <li>React</li>
           <li>Bootstrap</li>
-          <li>Node.js</li>
+          <li>Node.js*</li>
           <li>Next.js</li>
           <li>Redux</li>
+          <li>Express*</li>
+          <li>Angular*</li>
         </SkillsList>
+        <Note>* - BASIC KNOWLEDGE, OR RARELY USED</Note>
       </Wrapper>
       <Container>
         <Photo>
