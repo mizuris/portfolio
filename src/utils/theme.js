@@ -5,4 +5,5 @@ export const theme = {
   light: "#ffffff",
   special: "#FFDF6C",
   overlay: "rgba(32, 32, 32, 0.97)",
+  success: "#42ba96",
 };

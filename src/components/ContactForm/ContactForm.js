@@ -7,17 +7,31 @@ import {
   Label,
   MessageTextField,
   StyledForm,
+  SubmitButton,
 } from "./ContactForm.styled";
-import { Button } from "../Styled/styled";
 import AOS from "aos";
+import emailjs from "emailjs-com";
 
 function ContactForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
+    setSuccess(false);
+
+    emailjs
+      .sendForm(
+        "service_portfolio",
+        "template_portfolio",
+        e.target,
+        "user_KIKxBC68gHEFRpZIzNez5"
+      )
+      .then((res) => {
+        if (res.status === 200) {
+          setSuccess(true);
+        }
+      })
+      .then(() => e.target.reset());
   };
 
   useEffect(() => {
@@ -25,46 +39,31 @@ function ContactForm() {
   }, []);
 
   return (
-    <StyledForm onSubmit={handleSubmit} name="contact">
+    <StyledForm onSubmit={sendEmail} name="contact">
       <FormHeader data-aos="fade-up">Let's talk!</FormHeader>
       <FormText data-aos="fade-up">
         Call me, send me an e-mail or send your message below!
       </FormText>
       <InputGroup data-aos="fade-up">
         <Label htmlFor="name">Name</Label>
-        <Input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Your name"
-          required
-          type="text"
-          name="name"
-        />
+        <Input placeholder="Your name" required type="text" name="name" />
       </InputGroup>
       <InputGroup data-aos="fade-up">
         <Label htmlFor="email">E-mail</Label>
-        <Input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Your e-mail"
-          required
-          type="email"
-          name="email"
-        />
+        <Input placeholder="Your e-mail" required type="email" name="email" />
       </InputGroup>
       <InputGroup data-aos="fade-up">
         <Label htmlFor="message">Message</Label>
         <MessageTextField
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
           placeholder="Ask me whatever you want!"
           name="message"
         />
       </InputGroup>
-      <InputGroup>
-        <Button type="submit" data-aos="fade-up">
-          Send
-        </Button>
+      <InputGroup data-aos="fade-up">
+        <SubmitButton
+          value={success ? "Send another email" : "Send email"}
+          success={success}
+        />
       </InputGroup>
     </StyledForm>
   );

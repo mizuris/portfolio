@@ -31,7 +31,7 @@ function Header() {
         <Link to="about" smooth={true}>
           <IconButton
             data-aos="flip-right"
-            data-aos-delay="1200"
+            data-aos-delay="1800"
             text="About me"
             icon={<FiArrowRight />}
           />

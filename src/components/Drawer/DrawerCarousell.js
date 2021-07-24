@@ -1,18 +1,18 @@
 import React from "react";
 import { Carousell } from "./Drawer.styled";
 
-function DrawerCarousell({ screenshots }) {
+function DrawerCarousell({ screenshots, liveVersion }) {
   return (
     <Carousell>
-      <div>
+      <a rel="noreferrer" target="_blank" href={liveVersion}>
         <img src={screenshots[0]} alt="App screenshot" />
-      </div>
-      <div>
+      </a>
+      <a rel="noreferrer" target="_blank" href={liveVersion}>
         <img src={screenshots[1]} alt="App screenshot" />
-      </div>
-      <div>
+      </a>
+      <a rel="noreferrer" target="_blank" href={liveVersion}>
         <img src={screenshots[2]} alt="App screenshot" />
-      </div>
+      </a>
     </Carousell>
   );
 }

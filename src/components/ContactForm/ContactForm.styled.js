@@ -69,3 +69,18 @@ export const MessageTextField = styled.textarea`
   resize: none;
   ${sharedStyles};
 `;
+
+export const SubmitButton = styled.input.attrs({
+  type: "submit",
+})`
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  font-weight: bold;
+  color: ${({ theme, success }) => (success ? theme.light : theme.mainDark)};
+  background: ${({ theme, success }) =>
+    success ? theme.success : theme.special};
+  transition: 500ms;
+  position: relative;
+`;

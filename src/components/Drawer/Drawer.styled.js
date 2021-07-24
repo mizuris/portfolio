@@ -110,6 +110,10 @@ export const LongDescription = styled.div`
   line-height: 1.5rem;
   font-size: 0.8rem;
 
+  p {
+    margin-bottom: 0.5rem;
+  }
+
   a {
     color: ${({ theme }) => theme.special};
     text-decoration: none;
@@ -178,7 +182,10 @@ export const Carousell = styled.div`
   position: relative;
   margin-bottom: 1rem;
 
-  div {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -186,6 +193,7 @@ export const Carousell = styled.div`
     max-height: 100%;
     filter: grayscale(50%) brightness(50%);
     transition: 500ms ease all;
+    cursor: pointer;
 
     img {
       object-fit: cover;

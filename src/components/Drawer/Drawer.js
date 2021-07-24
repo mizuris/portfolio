@@ -39,19 +39,27 @@ function Drawer({ open, setOpen, project }) {
             </BackButton>
             <BackAnchor onClick={() => setOpen(false)}>Back</BackAnchor>
           </Back>
+
           <TextDivider>Title</TextDivider>
           <Title>{name}</Title>
-          <DrawerCarousell screenshots={screenshots} />
+          <DrawerCarousell
+            screenshots={screenshots}
+            liveVersion={liveVersion}
+          />
+
           <TextDivider>Overview</TextDivider>
           <ShortDescription>{shortDescription}</ShortDescription>
+
           <TextDivider>About</TextDivider>
           <LongDescription>{detailedDescription}</LongDescription>
+
           <TextDivider>Technologies</TextDivider>
           <Technologies>
             {technologies.map((item, index) => {
               return <Technology key={`${item}${index}`}>{item}</Technology>;
             })}
           </Technologies>
+
           <Links>
             <div>
               <TextDivider>Repository</TextDivider>
