@@ -70,9 +70,7 @@ export const MessageTextField = styled.textarea`
   ${sharedStyles};
 `;
 
-export const SubmitButton = styled.input.attrs({
-  type: "submit",
-})`
+export const SubmitButton = styled.input`
   padding: 1rem;
   cursor: pointer;
   border: none;

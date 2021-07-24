@@ -22,7 +22,7 @@ function Header() {
         </Introduction>
         <Link to="projects" smooth={true}>
           <IconButton
-            data-aos="flip-right"
+            data-aos="fade-right"
             data-aos-delay="1200"
             text="Check out my work"
             icon={<FiArrowRight />}
@@ -30,7 +30,7 @@ function Header() {
         </Link>
         <Link to="about" smooth={true}>
           <IconButton
-            data-aos="flip-right"
+            data-aos="fade-right"
             data-aos-delay="1800"
             text="About me"
             icon={<FiArrowRight />}

@@ -55,7 +55,7 @@ function AboutMe() {
         </SkillsList>
         <Note data-aos="fade-up">* - BASIC KNOWLEDGE OR RARELY USED</Note>
         <Button
-          data-aos="flip-right"
+          data-aos="fade-up"
           data-aos-delay="500"
           data-aos-duration="1500"
         >
@@ -63,7 +63,7 @@ function AboutMe() {
         </Button>
       </Wrapper>
       <Container>
-        <Photo data-aos="flip-left" data-aos-delay="300">
+        <Photo data-aos="fade-left" data-aos-delay="300">
           <img src={person} alt="person" />
           <span>Yep... It's me! 🙋‍♂️</span>
         </Photo>

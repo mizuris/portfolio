@@ -61,6 +61,7 @@ function ContactForm() {
       </InputGroup>
       <InputGroup data-aos="fade-up">
         <SubmitButton
+          type="submit"
           value={success ? "Send another email" : "Send email"}
           success={success}
         />
