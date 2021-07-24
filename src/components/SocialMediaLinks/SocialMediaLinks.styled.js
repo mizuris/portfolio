@@ -55,4 +55,19 @@ export const LinksList = styled.ul`
       }
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    li {
+      a {
+        font-size: 1.4rem;
+        width: 3rem;
+        height: 3rem;
+
+        &::before {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+  }
 `;

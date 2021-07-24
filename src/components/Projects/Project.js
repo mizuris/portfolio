@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Description,
   Name,
@@ -8,12 +8,18 @@ import {
 } from "./Projects.styled";
 import IconButton from "../IconButton/IconButton";
 import { BiLinkExternal } from "react-icons/bi";
+import AOS from "aos";
 
 function Project({ project, openDrawerById }) {
   const { id, name, shortDescription, image } = project;
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <ProjectContainer data-number={id}>
-      <ProjectContent>
+      <ProjectContent data-aos="zoom-in">
         <Name onClick={() => openDrawerById(id)}>{name}</Name>
         <Description>{shortDescription}</Description>
         <IconButton
@@ -22,7 +28,7 @@ function Project({ project, openDrawerById }) {
           icon={<BiLinkExternal />}
         />
       </ProjectContent>
-      <ProjectImage onClick={() => openDrawerById(id)}>
+      <ProjectImage data-aos="zoom-in" onClick={() => openDrawerById(id)}>
         <img src={image} alt={`${name} screenshot`} />
       </ProjectImage>
     </ProjectContainer>

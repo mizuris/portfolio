@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Adress,
   AdressGroup,
@@ -6,15 +6,28 @@ import {
   Icon,
   StyledContact,
   Socials,
+  ScrollTop,
 } from "./Contact.styled";
 import { MdPhone, MdEmail, MdPerson } from "react-icons/md";
 import { AiFillGithub, AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
+import { BiArrowToTop } from "react-icons/bi";
 import ContactForm from "../ContactForm/ContactForm";
+import AOS from "aos";
+import { Link } from "react-scroll";
 
 function Contact() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <StyledContact>
-      <ContactInfo>
+      <ScrollTop>
+        <Link to="header" smooth={true}>
+          <BiArrowToTop />
+        </Link>
+      </ScrollTop>
+      <ContactInfo data-aos="fade-up">
         <h3>Contact Info</h3>
         <AdressGroup>
           <Icon>

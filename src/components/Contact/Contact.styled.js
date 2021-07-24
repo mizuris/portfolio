@@ -55,7 +55,6 @@ export const Icon = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0.2rem;
-  margin-right: 1rem;
 
   a {
     text-decoration: none;
@@ -69,7 +68,6 @@ export const Icon = styled.div`
 `;
 
 export const Adress = styled.p`
-  font-size: 0.8rem;
   font-weight: 500;
   color: ${({ theme }) => theme.mainDark};
 `;
@@ -78,7 +76,7 @@ export const Socials = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 2rem;
+  margin: 2rem 0;
   position: relative;
 
   svg {
@@ -94,5 +92,27 @@ export const Socials = styled.div`
     width: 100%;
     height: 0.1rem;
     background-color: ${({ theme }) => theme.medium};
+  }
+`;
+
+export const ScrollTop = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background: ${({ theme }) => theme.mainDark};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    cursor: pointer;
+    display: block;
+  }
+
+  svg {
+    fill: ${({ theme }) => theme.special};
+    font-size: 2rem;
   }
 `;

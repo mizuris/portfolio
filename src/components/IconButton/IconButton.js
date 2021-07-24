@@ -1,9 +1,9 @@
 import React from "react";
 import { ButtonBase } from "./IconButton.styled";
 
-function IconButton({ text, icon, onClick }) {
+function IconButton({ text, icon, onClick, ...rest }) {
   return (
-    <ButtonBase onClick={onClick}>
+    <ButtonBase {...rest} onClick={onClick}>
       {text && <span>{text}</span>}
       {icon && icon}
     </ButtonBase>

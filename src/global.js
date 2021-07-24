@@ -39,4 +39,15 @@ export const GlobalStyles = createGlobalStyle`
             background: ${({ theme }) => theme.special};
         }
     }
+
+    li, p {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    
+        @media only screen and (min-width: 2000px) {
+            font-size: 1.2rem;
+            line-height: 2rem   ;
+        } 
+    }
+
 `;

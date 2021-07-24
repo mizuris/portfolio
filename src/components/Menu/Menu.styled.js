@@ -35,6 +35,8 @@ export const StyledMenu = styled.nav`
     color: ${({ theme }) => theme.light};
     text-decoration: none;
     transition: color 0.3s linear;
+    cursor: pointer;
+    margin-bottom: 2rem;
 
     &::before {
       content: "";

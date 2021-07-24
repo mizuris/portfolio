@@ -104,10 +104,8 @@ export const Name = styled.a`
 `;
 
 export const Description = styled.p`
-  font-size: 0.8rem;
   margin: 0.5rem 0 2rem;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
-  line-height: 1.5rem;
 `;
 
 export const ProjectImage = styled.a`

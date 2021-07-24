@@ -5,7 +5,6 @@ import Logo from "../Logo/Logo";
 import Menu from "../Menu/Menu";
 
 function Navbar({ open, setOpen }) {
-  // const [open, setOpen] = useState(false);
   const [isTransparent, setIsTransparent] = useState(true);
 
   useEffect(() => {
@@ -23,7 +22,7 @@ function Navbar({ open, setOpen }) {
     <StyledNav isTransparent={isTransparent}>
       <Logo withText />
       <Burger open={open} setOpen={setOpen} />
-      <Menu open={open} />
+      <Menu open={open} setOpen={setOpen} />
     </StyledNav>
   );
 }

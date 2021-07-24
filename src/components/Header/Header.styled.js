@@ -9,7 +9,7 @@ export const StyledHeader = styled(Section)`
   height: 100%;
   display: flex;
   align-items: center;
-  
+
   @media screen and (min-width: 769px) {
     ${LinksList} {
       position: absolute;
@@ -17,7 +17,7 @@ export const StyledHeader = styled(Section)`
       top: 50%;
       transform: translateY(-50%);
       flex-direction: column;
-      
+
       &::after {
         content: "";
         position: absolute;
@@ -30,7 +30,7 @@ export const StyledHeader = styled(Section)`
       }
     }
   }
-  
+
   @media screen and (max-width: 768px) {
     ${LinksList} {
       position: absolute;
@@ -38,29 +38,30 @@ export const StyledHeader = styled(Section)`
       left: 50%;
       transform: translateX(-50%);
       flex-direction: row;
-      
+
       li {
         padding: 0.6rem;
       }
-      
+
       a {
         font-size: 1.3rem;
       }
-      
+
       &::after {
         display: none;
       }
     }
   }
-  `;
+`;
 
 export const Wrapper = styled.div`
   margin: auto;
   width: 70%;
   z-index: 2;
-  
+
   ${Button} {
     padding: 1rem 2rem;
+    margin: 2rem 0;
 
     &:hover svg {
       transform: rotate(90deg);
@@ -70,6 +71,10 @@ export const Wrapper = styled.div`
   @media only screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
+
+    ${Button} {
+      margin: 0.5rem auto;
+    }
   }
 `;
 
@@ -77,14 +82,10 @@ export const Welcome = styled.p`
   color: ${({ theme }) => theme.light};
   font-weight: 500;
   margin: 0 0 0.3rem;
-
-  @media only screen and (max-width: 786px) {
-    font-size: 0.8rem;
-  }
 `;
 
 export const Introduction = styled.div`
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 
   h1 {
     font-size: 6rem;
@@ -97,7 +98,6 @@ export const Introduction = styled.div`
     font-style: italic;
     font-weight: 300;
     font-size: 2rem;
-    margin-bottom: 2rem;
   }
 
   @media only screen and (max-width: 992px) {

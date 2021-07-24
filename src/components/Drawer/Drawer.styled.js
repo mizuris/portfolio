@@ -103,8 +103,7 @@ export const Title = styled.h1`
 `;
 
 export const ShortDescription = styled.p`
-  line-height: 1.5rem;
-  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const LongDescription = styled.div`
@@ -135,7 +134,6 @@ export const Technologies = styled.ul`
 `;
 
 export const Technology = styled.li`
-  font-size: 0.8rem;
   padding: 0.2rem 0.5rem;
   margin: 0.4rem;
   background: ${({ theme }) => theme.medium};

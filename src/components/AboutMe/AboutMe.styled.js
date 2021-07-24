@@ -50,7 +50,6 @@ export const Text = styled.div`
   line-height: 1.5rem;
 
   p {
-    font-size: 0.9rem;
     margin-bottom: 1rem;
     text-align: justify;
     text-justify: inter-word;
@@ -161,8 +160,6 @@ export const SkillsList = styled.ul`
 
   li {
     position: relative;
-    font-size: 0.8rem;
-    line-height: 1rem;
     margin-bottom: 1rem;
     padding-left: 1.5rem;
 

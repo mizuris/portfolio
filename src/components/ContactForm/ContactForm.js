@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   FormHeader,
   FormText,
@@ -9,31 +9,62 @@ import {
   StyledForm,
 } from "./ContactForm.styled";
 import { Button } from "../Styled/styled";
+import AOS from "aos";
 
 function ContactForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <StyledForm>
-      <FormHeader>Let's talk!</FormHeader>
-      <FormText>
+    <StyledForm onSubmit={handleSubmit} name="contact">
+      <FormHeader data-aos="fade-up">Let's talk!</FormHeader>
+      <FormText data-aos="fade-up">
         Call me, send me an e-mail or send your message below!
       </FormText>
-      <InputGroup>
+      <InputGroup data-aos="fade-up">
         <Label htmlFor="name">Name</Label>
-        <Input placeholder="Your name" required type="text" name="name" />
+        <Input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Your name"
+          required
+          type="text"
+          name="name"
+        />
       </InputGroup>
-      <InputGroup>
+      <InputGroup data-aos="fade-up">
         <Label htmlFor="email">E-mail</Label>
-        <Input placeholder="Your e-mail" required type="email" name="email" />
+        <Input
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Your e-mail"
+          required
+          type="email"
+          name="email"
+        />
       </InputGroup>
-      <InputGroup>
+      <InputGroup data-aos="fade-up">
         <Label htmlFor="message">Message</Label>
         <MessageTextField
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           placeholder="Ask me whatever you want!"
           name="message"
         />
       </InputGroup>
       <InputGroup>
-        <Button>Send</Button>
+        <Button type="submit" data-aos="fade-up">
+          Send
+        </Button>
       </InputGroup>
     </StyledForm>
   );

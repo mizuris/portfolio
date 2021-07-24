@@ -27,7 +27,7 @@ export const StyledForm = styled.form`
 
 export const FormHeader = styled.h3`
   color: ${({ theme }) => theme.mainDark};
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   position: relative;
   margin-bottom: 2rem;
 
@@ -44,7 +44,6 @@ export const FormHeader = styled.h3`
 
 export const FormText = styled.p`
   color: ${({ theme }) => theme.medium};
-  font-size: 0.8rem;
   font-weight: bold;
   margin-bottom: 2rem;
 `;

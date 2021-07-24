@@ -38,14 +38,14 @@ function App() {
   return (
     <StyledApp>
       <Navbar open={menuOpen} setOpen={setMenuOpen} />
-      <Header />
-      <Section flex centered data-section="Bio">
+      <Header name="header" />
+      <Section name="about" flex centered data-section="Bio">
         <AboutMe />
       </Section>
-      <Section data-section="Projects">
+      <Section name="projects" data-section="Projects">
         <Projects drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
       </Section>
-      <Contact />
+      <Contact name="contact" />
     </StyledApp>
   );
 }
