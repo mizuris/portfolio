@@ -81,4 +81,5 @@ export const SubmitButton = styled.input`
     success ? theme.success : theme.special};
   transition: 500ms;
   position: relative;
+  -webkit-appearance: none;
 `;
