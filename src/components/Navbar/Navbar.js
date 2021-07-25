@@ -10,7 +10,7 @@ function Navbar({ open, setOpen }) {
   useEffect(() => {
     document.addEventListener("scroll", () => {
       let scrolled = document.scrollingElement.scrollTop;
-      if (scrolled >= 500) {
+      if (scrolled >= 80) {
         setIsTransparent(false);
       } else {
         setIsTransparent(true);

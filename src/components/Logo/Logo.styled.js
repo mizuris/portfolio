@@ -8,11 +8,11 @@ export const StyledLogo = styled.a`
   cursor: pointer;
   text-decoration: none;
 
-  svg {
-    max-width: 3rem;
+  object {
     margin-right: 0.5rem;
-    path {
+    svg {
       fill: ${({ dark, theme }) => (dark ? theme.mainDark : theme.light)};
+      max-width: 3rem;
     }
   }
 
