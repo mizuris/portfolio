@@ -11,17 +11,12 @@ function Header() {
     <StyledHeader name="header">
       <Wrapper as="header">
         <Welcome data-aos="fade-right">Hi 👋, my name is</Welcome>
-        <Introduction data-aos="fade-right" data-aos-delay="600">
+        <Introduction data-aos="fade-right">
           <h1>Piotr Bątor</h1>
           <h2>Junior Frontend Developer &amp; Graphics Designer</h2>
         </Introduction>
         <Link to="about" smooth={true}>
-          <IconButton
-            data-aos="fade-right"
-            data-aos-delay="1200"
-            text="About me"
-            icon={<FiArrowRight />}
-          />
+          <IconButton text="About me" icon={<FiArrowRight />} />
         </Link>
       </Wrapper>
       <SocialMediaLinks />
