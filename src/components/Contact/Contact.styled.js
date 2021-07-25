@@ -54,13 +54,21 @@ export const Icon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 300ms linear;
+
+  &:hover a svg {
+    fill: ${({ theme }) => theme.secondaryDark};
+  }
 
   a {
     text-decoration: none;
   }
 
   svg {
+    transition: 300ms linear;
     font-size: 1rem;
     margin: auto;
     fill: ${({ theme }) => theme.mainDark};

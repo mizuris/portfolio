@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   FormHeader,
   FormText,
@@ -8,16 +8,19 @@ import {
   MessageTextField,
   StyledForm,
   SubmitButton,
+  SubmitGroup,
 } from "./ContactForm.styled";
-import AOS from "aos";
 import emailjs from "emailjs-com";
+import { ImSpinner2 } from "react-icons/im";
 
 function ContactForm() {
   const [success, setSuccess] = useState(false);
+  const [sending, setSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
     setSuccess(false);
+    setSending(true);
 
     emailjs
       .sendForm(
@@ -29,14 +32,14 @@ function ContactForm() {
       .then((res) => {
         if (res.status === 200) {
           setSuccess(true);
+          setSending(false);
         }
       })
-      .then(() => e.target.reset());
+      .then(() => {
+        setSending(false);
+        e.target.reset();
+      });
   };
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <StyledForm onSubmit={sendEmail} name="contact">
@@ -59,13 +62,24 @@ function ContactForm() {
           name="message"
         />
       </InputGroup>
-      <InputGroup data-aos="fade-up">
+      <SubmitGroup data-aos="fade-up">
         <SubmitButton
           type="submit"
           value={success ? "Send another email" : "Send email"}
           success={success}
-        />
-      </InputGroup>
+          disabled={sending}
+        />{" "}
+        {sending && (
+          <span>
+            <ImSpinner2 />
+          </span>
+        )}
+        {!sending && success && (
+          <span data-aos="fade-left">
+            Thank you! <span>👍</span>
+          </span>
+        )}
+      </SubmitGroup>
     </StyledForm>
   );
 }

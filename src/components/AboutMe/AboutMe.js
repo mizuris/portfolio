@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Container,
   Heading,
@@ -10,12 +10,8 @@ import {
 } from "./AboutMe.styled";
 import { Button, Wrapper } from "../Styled/styled";
 import person from "../../assets/images/person.jpg";
-import AOS from "aos";
 
 function AboutMe() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <StyledAboutMe>

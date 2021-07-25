@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 const sharedStyles = css`
   background-color: ${({ theme }) => theme.light};
@@ -7,6 +7,15 @@ const sharedStyles = css`
   margin: 0.2rem 0 0.8rem;
   outline: 0;
   border: 1px solid ${({ theme }) => theme.mainDark};
+`;
+
+const spin = keyframes`
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 `;
 
 export const StyledForm = styled.form`
@@ -52,6 +61,29 @@ export const InputGroup = styled.div`
   position: relative;
 `;
 
+export const SubmitGroup = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 1rem;
+    padding: 0.5rem;
+    color: black;
+    font-size: 1rem;
+
+    span {
+      margin: 0;
+    }
+
+    svg {
+      fill: ${({ theme }) => theme.mainDark};
+      font-size: 1.2rem;
+      animation: ${spin} 1s forwards infinite;
+    }
+  }
+`;
+
 export const Label = styled.label`
   font-size: 0.8rem;
   color: ${({ theme }) => theme.mainDark};
@@ -82,4 +114,10 @@ export const SubmitButton = styled.input`
   transition: 500ms;
   position: relative;
   -webkit-appearance: none;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+  }
 `;

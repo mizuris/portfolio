@@ -73,7 +73,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
 
     ${Button} {
-      margin: 0.5rem auto;
+      width: 100%;
     }
   }
 `;

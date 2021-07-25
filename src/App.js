@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
+import AOS from "aos";
 
 const StyledApp = styled.main`
   position: relative;
@@ -16,6 +17,10 @@ const StyledApp = styled.main`
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    AOS.init({ once: true, duration: 1000 });
+  }, []);
 
   useEffect(() => {
     if (drawerOpen) {
