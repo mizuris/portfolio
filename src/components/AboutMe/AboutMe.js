@@ -44,7 +44,7 @@ function AboutMe() {
           <li data-aos="fade-up">SCSS/SASS</li>
           <li data-aos="fade-up">React</li>
           <li data-aos="fade-up">Bootstrap</li>
-          <li data-aos="fade-up">Node.js*</li>
+          <li data-aos="fade-up">Node.js</li>
           <li data-aos="fade-up">Next.js</li>
           <li data-aos="fade-up">Redux</li>
           <li data-aos="fade-up">Express*</li>

@@ -58,10 +58,11 @@ export const Wrapper = styled.div`
   margin: auto;
   width: 70%;
   z-index: 2;
+  padding: 4rem 0;  
 
   ${Button} {
     padding: 1rem 2rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
 
     &:hover svg {
       transform: rotate(90deg);

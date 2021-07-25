@@ -1,9 +1,9 @@
 import React from "react";
-import { Carousell } from "./Drawer.styled";
+import { Images } from "./Drawer.styled";
 
-function DrawerCarousell({ screenshots, liveVersion }) {
+function DrawerImages({ screenshots }) {
   return (
-    <Carousell>
+    <Images>
       <div>
         <img src={screenshots[0]} alt="App screenshot" />
       </div>
@@ -13,8 +13,8 @@ function DrawerCarousell({ screenshots, liveVersion }) {
       <div>
         <img src={screenshots[2]} alt="App screenshot" />
       </div>
-    </Carousell>
+    </Images>
   );
 }
 
-export default DrawerCarousell;
+export default DrawerImages;

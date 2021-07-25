@@ -173,7 +173,7 @@ export const Links = styled.div`
   }
 `;
 
-export const Carousell = styled.div`
+export const Images = styled.div`
   width: 100%;
   min-height: 150px;
   max-height: 100%;
@@ -206,7 +206,7 @@ export const Carousell = styled.div`
     }
 
     &:nth-child(1) {
-      clip-path: polygon(0 0, 40% 0, 20% 100%, 0% 100%);
+      clip-path: polygon(0 0, 39% 0, 19% 100%, 0% 100%);
 
       &:hover {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -214,7 +214,7 @@ export const Carousell = styled.div`
     }
 
     &:nth-child(2) {
-      clip-path: polygon(90% 0, 40% 0, 20% 100%, 60% 100%);
+      clip-path: polygon(89% 0, 40% 0, 20% 100%, 59% 100%);
       &:hover {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       }

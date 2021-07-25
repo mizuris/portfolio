@@ -33,13 +33,13 @@ export const projects = [
     id: 1,
     name: "CarWallet",
     shortDescription:
-      "Virtual garage for your vehicles. App uses form validation to add and edit vehicles in your list.",
+      "Virtual garage for your vehicles, allowing user to upload photos.",
     detailedDescription: (
       <>
         <p>
-          Virtual garage for your vehicles created with <em>ReactJS</em>. Styled
-          applied with Bootstrap and SCSS. CarWallet allows you to add your own,
-          or your dream vehicles to the list.
+          Virtual garage for your vehicles created with <em>ReactJS</em> and
+          styled with Bootstrap and SCSS. CarWallet allows you to add your own,
+          or your dream, vehicles to the garage.
         </p>
         <p>
           CarWallet is using <em>Firebase</em> to store uploaded images of your
@@ -86,8 +86,8 @@ export const projects = [
           to display results.
         </p>
         <p>
-          Recipes you find in results may be added to favorites list. You can
-          delete and add as many recipes as you want!
+          Recipes you find may be added to favorites list. You can delete and
+          add as many recipes as you want!
         </p>
         <p>
           Cookbook uses <em>Redux</em> to manage the state. I'm aware of Redux's
@@ -195,15 +195,15 @@ export const projects = [
     detailedDescription: (
       <>
         <p>
-          SSR Website - thanks to <em>Next.js</em> of local work and safety
+          Website built with <em>Next.js</em>. Website of local work and safety
           equipement dealer.
         </p>
         <p>
-          First <em>freelance</em> project. Main purpose was to create clean,
-          simple and good looking informative page. Previous version of this
-          website was created by me with use of <em>plain JavaScript</em>, HTML
-          and CSS. After a while I refactored the code, added new features and
-          created new layout.
+          A <em>freelance</em> project. Main purpose was to create clean, simple
+          and good looking informative page. Previous version of this website
+          was created by me with use of <em>plain JavaScript</em>, HTML and CSS.
+          After a while I refactored the code, added new features and created
+          new layout.
         </p>
       </>
     ),
@@ -217,7 +217,7 @@ export const projects = [
     id: 6,
     name: "Montage",
     shortDescription:
-      "Official website for European building company. It provides crucial informations about jobs availible in this company, and runs simple mail sender.",
+      "Official website for European building company. It provides crucial informations about jobs availible in this company and runs simple mail sender.",
     detailedDescription: (
       <>
         <p>
@@ -225,8 +225,8 @@ export const projects = [
           built with <em>Next.js</em> for <em>SEO</em> purposes.
         </p>
         <p>
-          Client wanted this website to be informative, and to contain data
-          about jobs he is offering.
+          Client wanted this website to be informative and to contain data about
+          jobs he is offering.
         </p>
         <p>
           User can contact the owner directly from 'Contact' page thanks to
@@ -236,9 +236,7 @@ export const projects = [
           <em>
             <b>NOTE</b>
           </em>
-          : website is not yet release, since one of pages is not finnished. All
-          other pages, though, are fully working. On <em>release</em> website
-          will have it's domain changed.
+          : website is not yet released.
         </p>
       </>
     ),

@@ -36,7 +36,7 @@ export const StyledLoader = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    animation: ${collapse} 600ms forwards linear;
+    animation: ${collapse} 300ms forwards linear;
   }
 
   &::before {

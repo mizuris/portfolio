@@ -14,7 +14,7 @@ import {
   Technology,
   DrawerOverlay,
 } from "./Drawer.styled";
-import DrawerCarousell from "./DrawerCarousell";
+import DrawerImages from "./DrawerImages";
 import { FiArrowLeftCircle, FiGithub, FiLink } from "react-icons/fi";
 
 function Drawer({ open, setOpen, project }) {
@@ -42,10 +42,7 @@ function Drawer({ open, setOpen, project }) {
 
           <TextDivider>Title</TextDivider>
           <Title>{name}</Title>
-          <DrawerCarousell
-            screenshots={screenshots}
-            liveVersion={liveVersion}
-          />
+          <DrawerImages screenshots={screenshots} />
 
           <TextDivider>Overview</TextDivider>
           <ShortDescription>{shortDescription}</ShortDescription>

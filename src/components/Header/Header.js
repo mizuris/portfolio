@@ -10,8 +10,8 @@ function Header() {
   return (
     <StyledHeader name="header">
       <Wrapper as="header">
-        <Welcome data-aos="fade-right">Hi 👋, my name is</Welcome>
-        <Introduction data-aos="fade-right">
+        <Welcome>Hi 👋, my name is</Welcome>
+        <Introduction>
           <h1>Piotr Bątor</h1>
           <h2>Junior Frontend Developer &amp; Graphics Designer</h2>
         </Introduction>

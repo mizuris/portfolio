@@ -80,7 +80,7 @@ export const Adress = styled.p`
   color: ${({ theme }) => theme.mainDark};
 `;
 
-export const Socials = styled.div`
+export const Socials = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-evenly;

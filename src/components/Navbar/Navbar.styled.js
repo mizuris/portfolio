@@ -7,7 +7,7 @@ export const StyledNav = styled.div`
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  padding: ${({ isTransparent }) => (isTransparent ? "2rem" : "0.5rem 2rem")};
+  padding: ${({ isTransparent }) => (isTransparent ? "1.5rem" : "0.5rem 1.5rem")};
   display: flex;
   align-items: center;
   justify-content: space-between;
