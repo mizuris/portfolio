@@ -10,9 +10,10 @@ import {
 } from "./AboutMe.styled";
 import { Button, Wrapper } from "../Styled/styled";
 import person from "../../assets/images/person.jpg";
+import resume from "../../assets/test.pdf";
+import { AiOutlineDownload } from "react-icons/ai";
 
 function AboutMe() {
-
   return (
     <StyledAboutMe>
       <Wrapper>
@@ -50,13 +51,15 @@ function AboutMe() {
           <li data-aos="fade-up">Angular*</li>
         </SkillsList>
         <Note data-aos="fade-up">* - BASIC KNOWLEDGE OR RARELY USED</Note>
-        <Button
-          data-aos="fade-up"
-          data-aos-delay="500"
-          data-aos-duration="1500"
-        >
-          Download resume
-        </Button>
+        <a download="Piotr_Bator_CV" href={resume}>
+          <Button
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="1500"
+          >
+            <AiOutlineDownload /> My resume
+          </Button>
+        </a>
       </Wrapper>
       <Container>
         <Photo data-aos="fade-left" data-aos-delay="300">

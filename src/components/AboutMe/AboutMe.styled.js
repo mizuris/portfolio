@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Wrapper } from "../Styled/styled";
+import { Wrapper, Button } from "../Styled/styled";
 
 export const StyledAboutMe = styled.div`
   width: 100%;
@@ -12,6 +12,24 @@ export const StyledAboutMe = styled.div`
 
   ${Wrapper} {
     margin: 0 auto;
+
+    a {
+      text-decoration: none;
+
+      ${Button} {
+        display: flex;
+        align-items: center;
+
+        &:hover svg {
+          fill: ${({ theme }) => theme.light};
+        }
+
+        svg {
+          fill: ${({ theme }) => theme.mainDark};
+          margin-right: 0.5rem;
+        }
+      }
+    }
   }
 
   @media only screen and (min-width: 992px) {

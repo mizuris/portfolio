@@ -6,17 +6,25 @@ function SocialMediaLinks() {
   return (
     <LinksList>
       <li>
-        <a target="_blank" rel="noopener" href="#!">
+        <a target="_blank" rel="noreferrer" href="https://github.com/mizuris/">
           <AiIcons.AiFillGithub />
         </a>
       </li>
       <li>
-        <a target="_blank" rel="noopener" href="#!">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.facebook.com/piotr.bator.33/"
+        >
           <AiIcons.AiFillFacebook />
         </a>
       </li>
       <li>
-        <a target="_blank" rel="noopener" href="#!">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/piotr-b%C4%85tor-b4b95620a/"
+        >
           <AiIcons.AiFillLinkedin />
         </a>
       </li>
