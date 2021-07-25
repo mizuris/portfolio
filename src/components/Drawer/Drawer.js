@@ -63,13 +63,13 @@ function Drawer({ open, setOpen, project }) {
           <Links>
             <div>
               <TextDivider>Repository</TextDivider>
-              <a href={repository}>
+              <a target="_blank" rel="noreferrer" href={repository}>
                 <FiGithub />
               </a>
             </div>
             <div>
               <TextDivider>Live version</TextDivider>
-              <a href={liveVersion}>
+              <a target="_blank" rel="noreferrer" href={liveVersion}>
                 <FiLink />
               </a>
             </div>
