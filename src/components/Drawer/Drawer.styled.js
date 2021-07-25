@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledDrawer = styled.div`
+export const StyledDrawer = styled.aside`
   position: fixed;
   right: 0;
   bottom: 0;

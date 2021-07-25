@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Section } from "./components/Styled/styled";
+import Loader from "./components/Loader/Loader";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import AboutMe from "./components/AboutMe/AboutMe";
@@ -8,7 +9,7 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import AOS from "aos";
 
-const StyledApp = styled.main`
+const StyledApp = styled.div`
   position: relative;
   width: 100%;
   z-index: 1;
@@ -17,6 +18,7 @@ const StyledApp = styled.main`
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     AOS.init({ once: true, duration: 1000 });
@@ -26,22 +28,20 @@ function App() {
     if (drawerOpen) {
       document.body.style.overflow = "hidden";
     }
-    if (!drawerOpen) {
-      document.body.style.overflow = "visible";
-    }
-  }, [drawerOpen]);
-
-  useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
     }
-    if (!menuOpen) {
+    if (loader) {
+      document.body.style.overflow = "hidden";
+    }
+    if (!loader && !menuOpen && !drawerOpen) {
       document.body.style.overflow = "visible";
     }
-  }, [menuOpen]);
+  }, [menuOpen, drawerOpen, loader]);
 
   return (
     <StyledApp>
+      <Loader loader={loader} setLoader={setLoader} />
       <Navbar open={menuOpen} setOpen={setMenuOpen} />
       <Header name="header" />
       <Section name="about" flex centered data-section="Bio">
