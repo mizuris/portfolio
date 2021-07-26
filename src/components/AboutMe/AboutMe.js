@@ -10,7 +10,7 @@ import {
 } from "./AboutMe.styled";
 import { Button, Wrapper } from "../Styled/styled";
 import person from "../../assets/images/person.jpg";
-import resume from "../../assets/test.pdf";
+import resume from "../../assets/EN_Piotr_Bator_CV.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 
 function AboutMe() {
