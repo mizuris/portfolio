@@ -54,7 +54,7 @@ export const StyledLoader = styled.div`
     stroke-dashoffset: 26523;
     fill: none;
     stroke: ${({ theme }) => theme.light};
-    animation: ${draw} 3000ms linear forwards;
+    animation: ${draw} 1500ms linear forwards;
     animation-delay: 800ms;
     stroke-width: 3rem;
   }

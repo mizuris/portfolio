@@ -22,11 +22,7 @@ function Contact() {
 
   return (
     <StyledContact>
-      <ScrollTop>
-        <Link to="header" smooth={true}>
-          <BiArrowToTop />
-        </Link>
-      </ScrollTop>
+      <ContactForm />
       <ContactInfo data-aos="fade-up">
         <h3>Contact Info</h3>
         <AdressGroup>
@@ -77,7 +73,11 @@ function Contact() {
           </Icon>
         </Socials>
       </ContactInfo>
-      <ContactForm />
+      <ScrollTop>
+        <Link to="header" smooth={true}>
+          <BiArrowToTop />
+        </Link>
+      </ScrollTop>
     </StyledContact>
   );
 }

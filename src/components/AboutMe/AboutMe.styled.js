@@ -76,22 +76,6 @@ export const Text = styled.div`
       color: ${({ theme }) => theme.special};
       position: relative;
       font-weight: 500;
-      cursor: pointer;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 0.05rem;
-        background: ${({ theme }) => theme.special};
-        transition: 200ms ease width;
-      }
-
-      &:hover::before {
-        width: 100%;
-      }
     }
   }
 `;

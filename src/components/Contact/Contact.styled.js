@@ -12,7 +12,6 @@ export const StyledContact = styled.div`
 export const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
-  order: 2;
   margin-top: 2rem;
 
   h3 {
@@ -85,6 +84,7 @@ export const Socials = styled.footer`
   align-items: center;
   justify-content: space-evenly;
   margin: 2rem 0;
+  padding: 1rem 0;
   position: relative;
 
   svg {

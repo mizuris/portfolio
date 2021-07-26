@@ -5,7 +5,7 @@ function Loader({ loader, setLoader }) {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
-    }, 4500);
+    }, 3000);
   }, [setLoader]);
 
   return (

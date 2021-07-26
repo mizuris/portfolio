@@ -23,7 +23,6 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.light};
-  order: 1;
 
   @media only screen and (min-width: 768px) {
     width: 80%;
