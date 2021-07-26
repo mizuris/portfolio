@@ -43,7 +43,7 @@ export const GlobalStyles = createGlobalStyle`
     
         @media only screen and (min-width: 2000px) {
             font-size: 1.2rem;
-            line-height: 2rem   ;
+            line-height: 2rem;
         } 
     }
 
