@@ -13,7 +13,7 @@ function Header() {
         <Welcome>Hi 👋, my name is</Welcome>
         <Introduction>
           <h1>Piotr Bątor</h1>
-          <h2>Junior Frontend Developer &amp; Graphics Designer</h2>
+          <h2>Junior Frontend Developer &amp; Graphic Designer</h2>
         </Introduction>
         <Link to="about" smooth={true}>
           <IconButton text="About me" icon={<FiArrowRight />} />

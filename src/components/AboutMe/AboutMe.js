@@ -21,7 +21,7 @@ function AboutMe() {
         <Text>
           <p data-aos="fade-up">
             Hello! I'm Piotr Bątor - <em>Junior Frontend Developer</em> and
-            Graphics Designer located in Poland. I am graduate of postgraduate
+            Graphic Designer located in Poland. I am graduate of postgraduate
             school with a frontend profile. I started my adventure with web
             development <em>2&nbsp;years ago.</em>
           </p>
