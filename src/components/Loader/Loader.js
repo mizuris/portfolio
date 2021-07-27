@@ -1,12 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { StyledLoader } from "./Loader.styled";
 
 function Loader({ loader, setLoader }) {
+  const [reducedMotion, setReducedMotion] = useState(false);
+
   useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 3000);
-  }, [setLoader]);
+    if (window.matchMedia("(prefers-reduced-motion)").matches) {
+      setReducedMotion(true);
+    } else {
+      setReducedMotion(false);
+    }
+  }, [reducedMotion]);
+
+  useEffect(() => {
+    setTimeout(
+      () => {
+        setLoader(false);
+      },
+      reducedMotion ? 800 : 2800
+    );
+  }, [setLoader, reducedMotion]);
 
   return (
     <StyledLoader loader={loader}>

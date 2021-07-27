@@ -58,4 +58,20 @@ export const StyledLoader = styled.div`
     animation-delay: 800ms;
     stroke-width: 3rem;
   }
+
+  @media (prefers-reduced-motion) {
+    &::before,
+    &::after {
+      animation: none;
+      display: none;
+    }
+
+    svg {
+      animation: none;
+      fill: ${({ theme }) => theme.light};
+      stroke: none;
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+    }
+  }
 `;
