@@ -105,16 +105,12 @@ export const Name = styled.a`
 
 export const Description = styled.p`
   margin: 0.5rem 0 2rem;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
-
-  @media screen and (min-width: 768px) {
-    text-shadow: none;
-  }
 `;
 
 export const ProjectImage = styled.a`
   display: block;
   height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;

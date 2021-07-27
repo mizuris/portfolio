@@ -14,7 +14,7 @@ export const ContactInfo = styled.div`
   flex-direction: column;
   margin-top: 2rem;
 
-  h3 {
+  h4 {
     color: ${({ theme }) => theme.mainDark};
     font-size: 1.4rem;
     position: relative;

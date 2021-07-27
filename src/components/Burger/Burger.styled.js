@@ -17,6 +17,10 @@ export const StyledBurger = styled.button`
     outline: 0;
   }
 
+  &:hover div {
+    background: ${({ theme }) => theme.special};
+  }
+
   div {
     width: 2rem;
     height: 0.25rem;
@@ -32,7 +36,8 @@ export const StyledBurger = styled.button`
 
     :nth-child(2) {
       opacity: ${({ open }) => (open ? "0" : "1")};
-      transform: ${({ open }) => (open ? "translateX(-20px)" : "translateX(0)")};
+      transform: ${({ open }) =>
+        open ? "translateX(-20px)" : "translateX(0)"};
     }
 
     :nth-child(3) {

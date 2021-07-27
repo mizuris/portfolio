@@ -33,7 +33,7 @@ export const StyledForm = styled.form`
   }
 `;
 
-export const FormHeader = styled.h3`
+export const FormHeader = styled.h5`
   color: ${({ theme }) => theme.mainDark};
   font-size: 1.5rem;
   position: relative;

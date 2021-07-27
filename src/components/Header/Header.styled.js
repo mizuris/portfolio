@@ -86,7 +86,6 @@ export const Welcome = styled.p`
 `;
 
 export const Introduction = styled.div`
-  /* margin-bottom: 1rem; */
 
   h1 {
     font-size: 6rem;

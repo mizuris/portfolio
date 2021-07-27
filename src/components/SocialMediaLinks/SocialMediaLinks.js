@@ -23,7 +23,7 @@ function SocialMediaLinks() {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://www.linkedin.com/in/piotr-b%C4%85tor-b4b95620a/"
+          href="www.linkedin.com/in/piotr-bątor"
         >
           <AiIcons.AiFillLinkedin />
         </a>

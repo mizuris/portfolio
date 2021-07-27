@@ -24,7 +24,7 @@ function Contact() {
     <StyledContact>
       <ContactForm />
       <ContactInfo data-aos="fade-up">
-        <h3>Contact Info</h3>
+        <h4>Contact Info</h4>
         <AdressGroup>
           <Icon>
             <MdPerson />
@@ -64,7 +64,7 @@ function Contact() {
           </Icon>
           <Icon>
             <a
-              href="https://www.linkedin.com/in/piotr-b%C4%85tor-b4b95620a/"
+              href="www.linkedin.com/in/piotr-bątor"
               rel="noreferrer"
               target="_blank"
             >

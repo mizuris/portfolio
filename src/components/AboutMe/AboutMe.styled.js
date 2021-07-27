@@ -90,7 +90,7 @@ export const Container = styled.div`
 `;
 
 export const Photo = styled.div`
-  width: 90%;
+  width: 100%;
   position: relative;
   z-index: 3;
   margin-top: 4rem;
