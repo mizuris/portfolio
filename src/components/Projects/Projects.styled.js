@@ -2,8 +2,13 @@ import styled from "styled-components";
 
 //PROJECTS.JS
 export const StyledProjects = styled.div`
-  width: 100%;
+  width: 80%;
   padding: 6rem 0;
+  margin: 0 auto;
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
 `;
 
 export const ProjectsList = styled.ul`

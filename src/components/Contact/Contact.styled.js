@@ -31,14 +31,10 @@ export const ContactInfo = styled.div`
     }
   }
 
-  @media only screen and (min-width: 768px) {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media only screen and (min-width: 768px) {
+  @media screen and (min-width: 992px) {
     width: 50%;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 `;
 
@@ -55,19 +51,12 @@ export const Icon = styled.div`
   justify-content: center;
   padding: 0.5rem;
   border-radius: 50%;
-  cursor: pointer;
-  transition: 300ms linear;
-
-  &:hover a svg {
-    fill: ${({ theme }) => theme.secondaryDark};
-  }
 
   a {
     text-decoration: none;
   }
 
   svg {
-    transition: 300ms linear;
     font-size: 1rem;
     margin: auto;
     fill: ${({ theme }) => theme.mainDark};

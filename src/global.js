@@ -38,11 +38,15 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     li, p {
-        font-size: 0.8rem;
+        font-size: 1rem;
         line-height: 1.5rem;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 0.9rem;
+        }
     
         @media only screen and (min-width: 2000px) {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             line-height: 2rem;
         } 
     }

@@ -6,7 +6,8 @@ const sharedStyles = css`
   padding: 0.8rem;
   margin: 0.2rem 0 0.8rem;
   outline: 0;
-  border: 1px solid ${({ theme }) => theme.mainDark};
+  border: 1px solid ${({ theme }) => theme.medium};
+  border-left: 3px solid ${({ theme }) => theme.special};
 `;
 
 const spin = keyframes`
@@ -24,12 +25,10 @@ export const StyledForm = styled.form`
   flex-direction: column;
   background: ${({ theme }) => theme.light};
 
-  @media only screen and (min-width: 768px) {
-    width: 80%;
-    margin: 0 auto;
-  }
-  @media only screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) {
+    max-width: 1000px;
     width: 50%;
+    margin: 0 auto 4rem;
   }
 `;
 
@@ -113,6 +112,10 @@ export const SubmitButton = styled.input`
   transition: 500ms;
   position: relative;
   -webkit-appearance: none;
+
+  &:hover {
+    background: ${({ theme }) => theme.specialHover};
+  }
 
   &:disabled {
     opacity: 0.5;

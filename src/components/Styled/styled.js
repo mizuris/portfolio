@@ -123,7 +123,7 @@ export const Button = styled.button`
 `;
 
 export const Wrapper = styled.div`
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   z-index: 2;
 `;

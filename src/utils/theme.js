@@ -4,6 +4,7 @@ export const theme = {
   medium: "#707070",
   light: "#ffffff",
   special: "#FFDF6C",
+  specialHover: "#dbbf5a",
   overlay: "rgba(32, 32, 32, 0.97)",
   success: "#42ba96",
 };
