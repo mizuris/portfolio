@@ -19,6 +19,7 @@ export const StyledAboutMe = styled.div`
       ${Button} {
         display: flex;
         align-items: center;
+        padding: 0.8rem 1.5rem;
 
         &:hover svg {
           fill: ${({ theme }) => theme.light};
