@@ -35,13 +35,13 @@ function Contact() {
           <Icon>
             <MdPhone />
           </Icon>
-          <Adress>+48 000-000-000</Adress>
+          <Adress>+48 537-081-677</Adress>
         </AdressGroup>
         <AdressGroup>
           <Icon>
             <MdEmail />
           </Icon>
-          <Adress>aaaa@gmail.com</Adress>
+          <Adress>pbator94@gmail.com</Adress>
         </AdressGroup>
         <Socials>
           <Icon>
