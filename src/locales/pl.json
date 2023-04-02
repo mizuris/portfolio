@@ -1,0 +1,90 @@
+{
+  "shared": {
+    "next": "Dalej",
+    "back": "Wróć"
+  },
+  "section-bg-title": {
+    "about-me": "BIO",
+    "projects": "PROJEKTY"
+  },
+  "language-selector": {
+    "polish": "PL",
+    "english": "EN"
+  },
+  "header": {
+    "welcome": "Cześć 👋, nazywam się",
+    "name": "Piotr Bątor",
+    "role": "Fullstack JavaScript Developer",
+    "next-section": "O mnie"
+  },
+  "about-me": {
+    "heading": "Krótko o mnie",
+    "text1": "Cześć! Jestem Piotr Bątor - <strong><em>Fullstack JavaScript Developer</em></strong> z ponad 3-letnim doświadczeniem.",
+    "text2": "Swoją karierę w IT rozpocząłem jako <em>freelance frontend developer</em>. Projekty tworzę z dbałością o szczegóły, przywiązaniem do <em>estetyki i schludności</em> designu.",
+    "text3": "Aktualnie pracuję jako <em>Fullstack JavaScript Developer</em> i zajmuję się tworzeniem aplikacji finansowych z wykorzystaniem nowoczesnych technologii.",
+    "technologies-familiarity": "Technologie z jakich korzystam:",
+    "resume": "Moje CV",
+    "person-photo-text": "Tak... To ja! 🙋‍♂️"
+  },
+  "projects": {
+    "shared": {
+      "title": "Tytuł",
+      "overview": "Streszczenie",
+      "about": "O projekcie",
+      "technologies": "Technologie",
+      "repository": "Repozytorium",
+      "live-version": "Wersja Live"
+    },
+    "car-wallet": {
+      "name": "CarWallet",
+      "short-description": "Wirutalny garaż dla Twoich pojazdów umożliwający zapisywanie zdjęć.",
+      "detailed-description": "<p>Wirtualny garaż dla Twoich pojazdów stworzony w <em>React</em> i wystylowany z użyciem Bootstrap i SCSS. CarWallet pozwala Ci dodać Twoje własne, lub wymarzone, samochody do Twojej listy.</p><p>CarWallet korzysta z <em>Firebase</em> by przechowywać obrazy Twoich pojazdów. Użycie Local Storage umożliwia lokalne zapamiętanie listy samochodów w Twojej przegolądarce, przez co możesz wrócić do niej kiedy chcesz.</p><p>Możesz swobodnie dodwać, editować i usuwać elementy z listy. Stan aplikacji utrzymywany jest w <em>Context API.</em></p>"
+    },
+    "cookbook-app": {
+      "name": "Cookbook App",
+      "short-description": "Wirtualna książka kucharska. Cookbook umożliwia wyszukiwanie ulubione przepisy, dodawać i usuwać wybrane dania z listy ulubionych.",
+      "detailed-description": "<p>Głodn(y/a)? Aplikacja Cookbook pomoże Ci znaleźć Twoje ulubione przepisy! Ta apka używa <em><a target='_blank' rel='noreferrer' href='https://spoonacular.com/food-api'>SPOONACULAR API</a></em> to wyszukiwania przepisów.</p><p>Możesz dodać nieograniczoną ilość przepisów do ulubionych, oraz usunąć te które uważasz za niepotrzebne.</p><p>Cookbook użwya <em>Redux</em> by zarządzać stanem w całej aplikacji.</p>"
+    },
+    "boredom-app": {
+      "name": "Boredom App",
+      "short-description": "Prosta aplikacja podpowiadająca czynności, które możesz wykonać gdy się nudzisz.",
+      "detailed-description": "<p>Lekka apka stworzona w <em>React</em>. Znajdziesz tu tylko jedną interakcję - przycisk! Kliknięcie w przycisk wygeneruje dla Ciebie losową aktywność do wykonania w wolnym czasie.</p><p>Aplikacja używa <em><a target='_blank' rel='noreferrer' href='https://www.boredapi.com/'>Bored API</a></em> do generowania wyników. Jeśli ikony są dla Ciebie nie jasne, w apce znajdziesz ich tłumaczenie!</p>"
+    },
+    "qr-code-center": {
+      "name": "QR Code center",
+      "short-description": "Lekka aplikacja pozawalająca skanować i tworzyć kody QR. Dostępna na każdym urządzeniu z kamerą/aparatem.",
+      "detailed-description": "<p>QR Code Center składa się z dwóch części - <em>Readera</em> &amp; <em>Generatora</em>. Apka stworzona w <em>React</em> z użyciem <em>TypeScript</em>.</p><p>Generator to komponent, zmieniający text lub URL w QR Code. Możesz <em>pobrać</em> wygenerowany kod na swoje urządzenie klikając w kod.</p><p>Reader jest dostępny na urządzeniach z kamerą/aparate takich jak: laptop, smartfon, tablet etc. Musisz dać aplikacji dostęp do aparatu jeśli chcesz wykorzystać jej pełen potencjał.</p><p>Aplikacja działa dzięki <em><a href='https://www.npmjs.com/package/qrcode' target='_blank' rel='noreferrer'>QR CODE</a></em> i <em><a href='https://www.npmjs.com/package/react-qr-reader' target='_blank' rel='noreferrer'>REACT-QR-READER</a></em></p>"
+    },
+    "artpoz": {
+      "name": "Artpoż",
+      "short-description": "Strona internetowa lokalnego sprzedawcy artykułów BHP i PPOŻ. Estetyczna, prosta strona informacyjna.",
+      "detailed-description": "<p>Strona zbudowana z użyciem <em>Next.js</em>. Przedstawia ofertę i opis lokalnego sprzedawcy artykułów BHP i PPOŻ.</p><p><em>Projekt komercyjny</em>.</p>"
+    },
+    "montage": {
+      "name": "Montage",
+      "short-description": "Oficjalna strona firmy budowlanej działającej na terenie Europy. Zawiera informacje na temat dostępnych ofert pracy w firmie oraz daje możliwość kontaktu z właścicielem poprzez wysyłanie maila ze strony.",
+      "detailed-description": "<p>Kolejny <em>komercyjny project</em> dla firmy budowlanej. Strona zbudowana z użyciem <em>Next.js</em>.</p><p>Dostosowana do potrzeb klienta, zapewnia informacje o otwartych rekrutacjach w firmie oraz o realizacjach wykonanych przez firmę.</p><p>Użytkownicy mogą skontaktować się z właścicielem bezpośrednio ze strony, wysyłając maila przez dostępny na niej formularz.</p>"
+    }
+  },
+  "contact": {
+    "form": {
+      "heading": "Porozmawiajmy!",
+      "text": "Zadzwoń, wyślij maila lub zostaw swoją wiadomość poniżej!",
+      "name-input": "Imię",
+      "name-placeholder": "Twoje imię",
+      "e-mail-input": "E-mail",
+      "e-mail-placeholder": "Twój adres e-mail",
+      "message-input": "Wiadomość",
+      "message-placeholder": "Zadaj pytanie lub wyślij prośbę!",
+      "send-message": "Wyślij email",
+      "send-another-message": "Wyślij kolejney email",
+      "thank-you-message": "Dziękuję! <span>👍</span>"
+    },
+    "details": {
+      "heading": "Dane kontaktowe",
+      "person": "Piotr Bątor",
+      "phone-number": "+48 537-081-677",
+      "e-mail-address": "pbator94@gmail.com"
+    }
+  }
+}

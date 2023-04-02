@@ -3,8 +3,9 @@ import { StyledNav } from "./Navbar.styled";
 import Burger from "../Burger/Burger";
 import Logo from "../Logo/Logo";
 import Menu from "../Menu/Menu";
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
 
-function Navbar({ open, setOpen }) {
+const Navbar = ({ open, setOpen }) => {
   const [isTransparent, setIsTransparent] = useState(true);
 
   useEffect(() => {
@@ -20,11 +21,12 @@ function Navbar({ open, setOpen }) {
 
   return (
     <StyledNav isTransparent={isTransparent}>
-      <Logo withText />
+      <Logo />
+      <LanguageSelector />
       <Burger open={open} setOpen={setOpen} />
       <Menu open={open} setOpen={setOpen} />
     </StyledNav>
   );
-}
+};
 
 export default Navbar;

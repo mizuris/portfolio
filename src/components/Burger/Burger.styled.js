@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledBurger = styled.button`
-  margin-left: auto;
+  /* margin-left: auto; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;

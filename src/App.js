@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { I18nextProvider, useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { Section } from "./components/Styled/styled";
 import Loader from "./components/Loader/Loader";
@@ -8,6 +9,7 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import AOS from "aos";
+import i18n from "./i18n";
 
 const StyledApp = styled.div`
   position: relative;
@@ -16,6 +18,7 @@ const StyledApp = styled.div`
 `;
 
 function App() {
+  const { t } = useTranslation();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [loader, setLoader] = useState(true);
@@ -40,18 +43,25 @@ function App() {
   }, [menuOpen, drawerOpen, loader]);
 
   return (
-    <StyledApp>
-      <Loader loader={loader} setLoader={setLoader} />
-      <Navbar open={menuOpen} setOpen={setMenuOpen} />
-      <Header name="header" />
-      <Section name="about" flex centered data-section="Bio">
-        <AboutMe />
-      </Section>
-      <Section name="projects" data-section="Projects">
-        <Projects drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
-      </Section>
-      <Contact name="contact" />
-    </StyledApp>
+    <I18nextProvider i18n={i18n}>
+      <StyledApp>
+        <Loader loader={loader} setLoader={setLoader} />
+        <Navbar open={menuOpen} setOpen={setMenuOpen} />
+        <Header name="header" />
+        <Section
+          name="about"
+          flex
+          centered
+          data-section={t("section-bg-title:about-me")}
+        >
+          <AboutMe />
+        </Section>
+        <Section name="projects" data-section={t("section-bg-title:projects")}>
+          <Projects drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
+        </Section>
+        <Contact name="contact" />
+      </StyledApp>
+    </I18nextProvider>
   );
 }
 

@@ -15,18 +15,13 @@ import {
   DrawerOverlay,
 } from "./Drawer.styled";
 import DrawerImages from "./DrawerImages";
+import { HTMLContent } from "../HTMLContent/HTMLContent";
 import { FiArrowLeftCircle, FiGithub, FiLink } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
 
 function Drawer({ open, setOpen, project }) {
-  const {
-    name,
-    shortDescription,
-    detailedDescription,
-    technologies,
-    liveVersion,
-    repository,
-    screenshots,
-  } = project;
+  const { t } = useTranslation();
+  const { technologies, liveVersion, repository, screenshots, trans } = project;
 
   return (
     <>
@@ -37,20 +32,28 @@ function Drawer({ open, setOpen, project }) {
             <BackButton onClick={() => setOpen(false)}>
               <FiArrowLeftCircle />
             </BackButton>
-            <BackAnchor onClick={() => setOpen(false)}>Back</BackAnchor>
+            <BackAnchor onClick={() => setOpen(false)}>
+              {t("shared:back")}
+            </BackAnchor>
           </Back>
 
-          <TextDivider>Title</TextDivider>
-          <Title>{name}</Title>
+          <TextDivider>{t("projects:shared:title")}</TextDivider>
+          <Title>{t(`projects:${trans}:name`)}</Title>
           <DrawerImages screenshots={screenshots} />
 
-          <TextDivider>Overview</TextDivider>
-          <ShortDescription>{shortDescription}</ShortDescription>
+          <TextDivider>{t("projects:shared:overview")}</TextDivider>
+          <ShortDescription>
+            {t(`projects:${trans}:short-description`)}
+          </ShortDescription>
 
-          <TextDivider>About</TextDivider>
-          <LongDescription>{detailedDescription}</LongDescription>
+          <TextDivider>{t("projects:shared:about")}</TextDivider>
+          <LongDescription>
+            <HTMLContent>
+              {t(`projects:${trans}:detailed-description`)}
+            </HTMLContent>
+          </LongDescription>
 
-          <TextDivider>Technologies</TextDivider>
+          <TextDivider>{t("projects:shared:technologies")}</TextDivider>
           <Technologies>
             {technologies.map((item, index) => {
               return <Technology key={`${item}${index}`}>{item}</Technology>;
@@ -59,13 +62,13 @@ function Drawer({ open, setOpen, project }) {
 
           <Links>
             <div>
-              <TextDivider>Repository</TextDivider>
+              <TextDivider>{t("projects:shared:title")}</TextDivider>
               <a target="_blank" rel="noreferrer" href={repository}>
                 <FiGithub />
               </a>
             </div>
             <div>
-              <TextDivider>Live version</TextDivider>
+              <TextDivider>{t("projects:shared:live-version")}</TextDivider>
               <a target="_blank" rel="noreferrer" href={liveVersion}>
                 <FiLink />
               </a>

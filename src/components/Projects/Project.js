@@ -8,15 +8,17 @@ import {
 } from "./Projects.styled";
 import IconButton from "../IconButton/IconButton";
 import { BiLinkExternal } from "react-icons/bi";
+import { useTranslation } from "react-i18next";
 
 function Project({ project, openDrawerById }) {
-  const { id, name, shortDescription, image } = project;
-  
+  const { t } = useTranslation();
+  const { id, name, image, trans } = project;
+
   return (
     <ProjectContainer data-number={id}>
       <ProjectContent data-aos="zoom-in">
         <Name onClick={() => openDrawerById(id)}>{name}</Name>
-        <Description>{shortDescription}</Description>
+        <Description>{t(`projects:${trans}:short-description`)}</Description>
         <IconButton
           onClick={() => openDrawerById(id)}
           text="Read more"
