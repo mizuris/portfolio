@@ -12,8 +12,11 @@ import {
 } from "./ContactForm.styled";
 import emailjs from "emailjs-com";
 import { ImSpinner2 } from "react-icons/im";
+import { HTMLContent } from "../HTMLContent/HTMLContent";
+import { useTranslation } from "react-i18next";
 
 function ContactForm() {
+  const { t } = useTranslation();
   const [success, setSuccess] = useState(false);
   const [sending, setSending] = useState(false);
 
@@ -43,29 +46,41 @@ function ContactForm() {
 
   return (
     <StyledForm onSubmit={sendEmail} name="contact">
-      <FormHeader data-aos="fade-up">Let's talk!</FormHeader>
-      <FormText data-aos="fade-up">
-        Call me, send me an e-mail or send your message below!
-      </FormText>
+      <FormHeader data-aos="fade-up">{t("contact:form:heading")}</FormHeader>
+      <FormText data-aos="fade-up">{t("contact:form:text")}</FormText>
       <InputGroup data-aos="fade-up">
-        <Label htmlFor="name">Name</Label>
-        <Input placeholder="Your name" required type="text" name="name" />
+        <Label htmlFor="name">{t("contact:form:name-input")}</Label>
+        <Input
+          placeholder={t("contact:form:name-placeholder")}
+          required
+          type="text"
+          name="name"
+        />
       </InputGroup>
       <InputGroup data-aos="fade-up">
-        <Label htmlFor="email">E-mail</Label>
-        <Input placeholder="Your e-mail" required type="email" name="email" />
+        <Label htmlFor="email">{t("contact:form:e-mail-placeholder")}</Label>
+        <Input
+          placeholder={t("contact:form:e-mail-placeholder")}
+          required
+          type="email"
+          name="email"
+        />
       </InputGroup>
       <InputGroup data-aos="fade-up">
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message">{t("contact:form:message-placeholder")}</Label>
         <MessageTextField
-          placeholder="Ask me whatever you want!"
+          placeholder={t("contact:form:message-placeholder")}
           name="message"
         />
       </InputGroup>
       <SubmitGroup data-aos="fade-up">
         <SubmitButton
           type="submit"
-          value={success ? "Send another email" : "Send email"}
+          value={
+            success
+              ? t("contact:form:send-another-message")
+              : t("contact:form:send-message")
+          }
           success={success}
           disabled={sending}
         />{" "}
@@ -76,7 +91,7 @@ function ContactForm() {
         )}
         {!sending && success && (
           <span data-aos="fade-left">
-            Thank you! <span>👍</span>
+            <HTMLContent>{t("contact:form:thank-you-message")}</HTMLContent>
           </span>
         )}
       </SubmitGroup>

@@ -14,8 +14,10 @@ import { BiArrowToTop } from "react-icons/bi";
 import ContactForm from "../ContactForm/ContactForm";
 import AOS from "aos";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init();
   }, []);
@@ -24,24 +26,24 @@ function Contact() {
     <StyledContact>
       <ContactForm />
       <ContactInfo data-aos="fade-up">
-        <h4>Contact Info</h4>
+        <h4>{t("contact:details:heading")}</h4>
         <AdressGroup>
           <Icon>
             <MdPerson />
           </Icon>
-          <Adress>Piotr Bątor</Adress>
+          <Adress>{t("contact:details:person")}</Adress>
         </AdressGroup>
         <AdressGroup>
           <Icon>
             <MdPhone />
           </Icon>
-          <Adress>+48 537-081-677</Adress>
+          <Adress>{t("contact:details:phone-number")}</Adress>
         </AdressGroup>
         <AdressGroup>
           <Icon>
             <MdEmail />
           </Icon>
-          <Adress>pbator94@gmail.com</Adress>
+          <Adress>{t("contact:details:e-mail-address")}</Adress>
         </AdressGroup>
         <Socials>
           <Icon>

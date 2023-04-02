@@ -32,6 +32,7 @@ export const projects = [
   {
     id: 1,
     name: "CarWallet",
+    trans: "car-wallet",
     shortDescription:
       "Virtual garage for your vehicles, allowing user to upload photos.",
     detailedDescription: (
@@ -67,6 +68,7 @@ export const projects = [
   {
     id: 2,
     name: "Cookbook App",
+    trans: "cookbook-app",
     shortDescription:
       "Online recipe book. Cookbook allows you to find your favorites recipes and add or remove them from favorites list. App uses external API.",
     detailedDescription: (
@@ -105,6 +107,7 @@ export const projects = [
   {
     id: 3,
     name: "Boredom App",
+    trans: "boredom-app",
     shortDescription:
       "Simple app that generates random activities and their descriptions.",
     detailedDescription: (
@@ -139,6 +142,7 @@ export const projects = [
   {
     id: 4,
     name: "QR Code center",
+    trans: "qr-code-center",
     shortDescription:
       "Lightweight app that allows you to scan and generate QR codes. Reader is avalible for all devices equiped with camera.",
     detailedDescription: (
@@ -190,6 +194,7 @@ export const projects = [
   {
     id: 5,
     name: "Artpoż",
+    trans: "artpoz",
     shortDescription:
       "Local work and safety equipement dealer. Website is re-designed to look fresh and simple.",
     detailedDescription: (
@@ -216,6 +221,7 @@ export const projects = [
   {
     id: 6,
     name: "Montage",
+    trans: "montage",
     shortDescription:
       "Official website for European building company. It provides crucial informations about jobs availible in this company and runs simple mail sender.",
     detailedDescription: (
@@ -231,12 +237,6 @@ export const projects = [
         <p>
           User can contact the owner directly from 'Contact' page thanks to
           simple mail-sender.
-        </p>
-        <p>
-          <em>
-            <b>NOTE</b>
-          </em>
-          : website is not yet released.
         </p>
       </>
     ),
