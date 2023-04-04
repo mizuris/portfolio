@@ -62,7 +62,7 @@ function Drawer({ open, setOpen, project }) {
 
           <Links>
             <div>
-              <TextDivider>{t("projects:shared:title")}</TextDivider>
+              <TextDivider>{t("projects:shared:repository")}</TextDivider>
               <a target="_blank" rel="noreferrer" href={repository}>
                 <FiGithub />
               </a>
